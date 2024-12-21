@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.example.androidapp-merged_res-71:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.androidapp-main-72:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.androidapp-merged_res-71:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.androidapp-main-72:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.androidapp-merged_res-71:/layout_activity_main.xml.flat",
+        "source": "com.example.androidapp-main-72:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.androidapp-merged_res-71:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.androidapp-main-72:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    }
+]

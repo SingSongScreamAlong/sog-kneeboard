@@ -1,0 +1,503 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:2:1-26:12
+MERGED from [androidx.databinding:viewbinding:8.1.4] /Users/conradweeden/.gradle/caches/8.12/transforms/532389a025d3a840e5eb497f38b99e2f/transformed/jetified-viewbinding-8.1.4/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.material:material:1.11.0] /Users/conradweeden/.gradle/caches/8.12/transforms/4d881cf1ef41347262229789c28e31a2/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/conradweeden/.gradle/caches/8.12/transforms/69f3687447468e993b854840f25c649d/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
+MERGED from [io.coil-kt:coil-compose:2.5.0] /Users/conradweeden/.gradle/caches/8.12/transforms/22fc0bc49cdfa4207a47130016e2e999/transformed/jetified-coil-compose-2.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-compose-base:2.5.0] /Users/conradweeden/.gradle/caches/8.12/transforms/a2a53f0f48db30fb160d5ea75015f470/transformed/jetified-coil-compose-base-2.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil:2.5.0] /Users/conradweeden/.gradle/caches/8.12/transforms/88c37b1c1f0e42b63b7af32dae92053f/transformed/jetified-coil-2.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-base:2.5.0] /Users/conradweeden/.gradle/caches/8.12/transforms/81b40b78cc750dbdbe6a11316953fad4/transformed/jetified-coil-base-2.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/conradweeden/.gradle/caches/8.12/transforms/a6639d1a6384f7ecd581564ed990d0d4/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/conradweeden/.gradle/caches/8.12/transforms/b79d578c3338cb97d7f2ec2dc4cc59eb/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/conradweeden/.gradle/caches/8.12/transforms/fb7213114ed7dee048e1d6f00eb6d57d/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/71194681650def994a9cb573563be1cf/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/200077497474ac4e00b4c8d92985e9b1/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] /Users/conradweeden/.gradle/caches/8.12/transforms/8aab1c7a5fec2e8b6942215455267fa6/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/15d4fa9dddde8f1b498bacb1911bb60c/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/41db54c92bd5bc64f60553f317a79fa9/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/750d42dac016cb486678cd9a7a90ad7b/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.hilt:hilt-navigation-compose:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/9acfba3210631fb631258df8f39c2e24/transformed/jetified-hilt-navigation-compose-1.1.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.hilt:hilt-navigation:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/5ba69c3e8a974b25931b735a0785ec17/transformed/jetified-hilt-navigation-1.1.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-common:2.7.6] /Users/conradweeden/.gradle/caches/8.12/transforms/37a4d5ba1f61724cc7362e55aa6ff0e7/transformed/navigation-common-2.7.6/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.7.6] /Users/conradweeden/.gradle/caches/8.12/transforms/bd83c00a66456362cd9feb7b7618fe6b/transformed/navigation-runtime-2.7.6/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.6] /Users/conradweeden/.gradle/caches/8.12/transforms/f1f6a6c7026f7615d7f9cee455800e56/transformed/navigation-common-ktx-2.7.6/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.6] /Users/conradweeden/.gradle/caches/8.12/transforms/2c2f0871ed232264a16cf6fb8393b21a/transformed/navigation-runtime-ktx-2.7.6/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-compose:2.7.6] /Users/conradweeden/.gradle/caches/8.12/transforms/350cc8185c57701f17b500da9e8f4333/transformed/jetified-navigation-compose-2.7.6/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-ripple-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/855b3e3049aceddbd197f07dbbc9281b/transformed/jetified-material-ripple-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/9487515b662f9a8ab5d551af097bfb4c/transformed/jetified-material-icons-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/b692e1297acd0dce374dd741d4fe19bb/transformed/jetified-material-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/41e2f0e080575b306e5d777fc64d0d21/transformed/jetified-foundation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/c4e92be808d0c4f3de044ef8c160b5b0/transformed/jetified-foundation-layout-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/946893e7f966e61f90977193a35bafc1/transformed/jetified-animation-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/647c567610cc8163b100488f0909ab95/transformed/jetified-animation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/4bf050affbba706d2e9df9237d59752f/transformed/jetified-ui-util-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/cd188de0ab072160a4d51e6e4dbd0c04/transformed/jetified-ui-unit-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/e17ae8e51231982eb8cf5ef88901fbe3/transformed/jetified-ui-text-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/d9ac1dd83233516c38a66e4119af577c/transformed/jetified-ui-graphics-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/e969b4c26f12d9523b0294644c7c0ad6/transformed/jetified-ui-geometry-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/c48034d8601e86bcc342e9fe10521191/transformed/jetified-ui-tooling-data-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-test-manifest:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/63ae310010eca68df802885a1b4e578b/transformed/jetified-ui-test-manifest-1.5.4/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/91bf46794da7265aa3190c6b95bc2630/transformed/jetified-ui-tooling-preview-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-tooling-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/3164f3e51f7ae2aa2d7d9b8697ae84df/transformed/jetified-ui-tooling-release/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.dagger:hilt-android:2.48] /Users/conradweeden/.gradle/caches/8.12/transforms/8f6cdb9507c80b76eeb868f219048d40/transformed/jetified-hilt-android-2.48/AndroidManifest.xml:16:1-19:12
+MERGED from [androidx.activity:activity-ktx:1.8.2] /Users/conradweeden/.gradle/caches/8.12/transforms/0f7c1f4ee8ece6df1958e3a5cd5435e2/transformed/jetified-activity-ktx-1.8.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.fragment:fragment:1.5.1] /Users/conradweeden/.gradle/caches/8.12/transforms/ce687dae8a20ae9ded57c7843431ce8f/transformed/fragment-1.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.8.2] /Users/conradweeden/.gradle/caches/8.12/transforms/bfd2585ee424a0ff084e753ce8f307ab/transformed/jetified-activity-1.8.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-compose:1.8.2] /Users/conradweeden/.gradle/caches/8.12/transforms/7516d85ba07423a95af35f84323c12d7/transformed/jetified-activity-compose-1.8.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/7c5c80d7d350267b573c4f846e485366/transformed/jetified-emoji2-views-helper-1.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/8dcfe2a94b0574980abc31a6beaa5cd5/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/c1e2805fc99ae332db9658deae51f738/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/02e16fd52d8710e8117e7ac9bb68069b/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/7fd9a336e5d40bd9a21f01e040fe44d0/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/conradweeden/.gradle/caches/8.12/transforms/0e67ffb1a7da955abf514b7cb9f12e46/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/conradweeden/.gradle/caches/8.12/transforms/f1586212294ea13583ac3f06dbd7b32e/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/9a97e2208b3b7e1449bd9c9189a81061/transformed/jetified-lifecycle-livedata-core-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/aa62de13279aa5ef929f01a7c7858e4a/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/306d480dd6d401fa70ca6713dc56a4d0/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/bb3da1612dc1abfc80a010494d41987c/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/6e7d8727c11f89586587535ec571d08d/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/7a0daa6e1d05d11c5bc1bc3c85d060bf/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/d10010dd9332b1e3e6b6f0c053e2af2d/transformed/jetified-lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/0c98cf0d9db8031964cbb0441c5ad7ac/transformed/jetified-lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/3a20ac59325e01483271375d70ef9462/transformed/jetified-lifecycle-livedata-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/371c418e59b93ed818d006723195fc83/transformed/jetified-lifecycle-viewmodel-compose-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] /Users/conradweeden/.gradle/caches/8.12/transforms/651dd1e9eb89163e2ea6684dce16324c/transformed/jetified-accompanist-drawablepainter-0.32.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.compose.ui:ui-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/b9de4b13f2e273678dcd7e8934ba7598/transformed/jetified-ui-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/c7777f9870251e9263c65b6c4b05699e/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/37f9e0a0d2b1a57b815c65d577f90045/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/938e0685a63e357799360e23c1acc6a1/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/ef3dae80051bd90491997fc04cfc1a91/transformed/jetified-autofill-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.12.0] /Users/conradweeden/.gradle/caches/8.12/transforms/f23ba0ff578484998bd1870ce04b68e8/transformed/core-1.12.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/0a0612d349fff786ac9972bf6fae1054/transformed/jetified-customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/conradweeden/.gradle/caches/8.12/transforms/b31cf6296863db200599e3768be49c9d/transformed/jetified-core-ktx-1.12.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-preferences:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/1d5c1d5469a566e7d9262d1261eebe34/transformed/jetified-datastore-preferences-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/conradweeden/.gradle/caches/8.12/transforms/72ddec9297f10c477ee8be1d41584d70/transformed/room-runtime-2.6.1/AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.room:room-ktx:2.6.1] /Users/conradweeden/.gradle/caches/8.12/transforms/e93574afd47683cbd9d4bcb7cb5f0107/transformed/jetified-room-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.datastore:datastore:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/be735d2ab7e7c2c648da78a6afa6be76/transformed/jetified-datastore-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/1bb14c6967c1d0768300440975354d99/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/58abc05b44d946db84e93453897cfd8f/transformed/sqlite-2.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/38e6accb5a1c098d24e7d65d828885a4/transformed/jetified-runtime-saveable-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/e8f27765401cde75ee23c17c4281befe/transformed/jetified-runtime-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/conradweeden/.gradle/caches/8.12/transforms/69ce804d4aac718ba90716ac0b680352/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] /Users/conradweeden/.gradle/caches/8.12/transforms/f6499b1103a30639c0ce4d7d69e03db4/transformed/jetified-security-crypto-1.1.0-alpha06/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/7db85a04cdc5969c5aa7cff648cd6d02/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/6fa514e5aa0cca489977ef425a108a93/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/conradweeden/.gradle/caches/8.12/transforms/8841bc118624160ea674c974916659c8/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/6bd297128f1f4aaeac67b986ae8e8867/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/conradweeden/.gradle/caches/8.12/transforms/73e6e4fffb425e4881e634f831c2e607/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/conradweeden/.gradle/caches/8.12/transforms/4836e9af38a3db946dad80204ad1371f/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/95165e82bfa7eebe369e8198daeb6ab5/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/5ff25c24cee3d1875f930fcbdd6b49d8/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/d215d5cf20dab068014f48b2db2b5328/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/3035e7cf41df021ea41c39c8a56694a5/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] /Users/conradweeden/.gradle/caches/8.12/transforms/ee9f15dcef42da9d9f1dc7ae85ff1cb8/transformed/exifinterface-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [org.tensorflow:tensorflow-lite-support:0.4.4] /Users/conradweeden/.gradle/caches/8.12/transforms/5f42b07c8d9b7a92eada6ac8e90dc3e4/transformed/jetified-tensorflow-lite-support-0.4.4/AndroidManifest.xml:2:1-5:12
+MERGED from [org.tensorflow:tensorflow-lite:2.14.0] /Users/conradweeden/.gradle/caches/8.12/transforms/e20c835cb345f79d9fe123c60052280f/transformed/jetified-tensorflow-lite-2.14.0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.dagger:dagger-lint-aar:2.48] /Users/conradweeden/.gradle/caches/8.12/transforms/4f213e7432f33d66b8899ed8a0d014c3/transformed/jetified-dagger-lint-aar-2.48/AndroidManifest.xml:16:1-19:12
+MERGED from [org.tensorflow:tensorflow-lite-support-api:0.4.4] /Users/conradweeden/.gradle/caches/8.12/transforms/f6c74df5c46c9d40b5f8179340e1f71d/transformed/jetified-tensorflow-lite-support-api-0.4.4/AndroidManifest.xml:2:1-5:12
+MERGED from [org.tensorflow:tensorflow-lite-api:2.14.0] /Users/conradweeden/.gradle/caches/8.12/transforms/59a93056b915773ce7428fa7abf014c7/transformed/jetified-tensorflow-lite-api-2.14.0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/conradweeden/.gradle/caches/8.12/transforms/1b9f367ca75d5f4e2ca6dc022c0db0d1/transformed/jetified-image-1.0.0-beta1/AndroidManifest.xml:2:1-9:12
+	package
+		INJECTED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:5:5-79
+	android:name
+		ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:5:22-76
+application
+ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:7:5-25:19
+INJECTED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:7:5-25:19
+MERGED from [com.google.android.material:material:1.11.0] /Users/conradweeden/.gradle/caches/8.12/transforms/4d881cf1ef41347262229789c28e31a2/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.11.0] /Users/conradweeden/.gradle/caches/8.12/transforms/4d881cf1ef41347262229789c28e31a2/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/conradweeden/.gradle/caches/8.12/transforms/69f3687447468e993b854840f25c649d/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/conradweeden/.gradle/caches/8.12/transforms/69f3687447468e993b854840f25c649d/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.compose.ui:ui-test-manifest:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/63ae310010eca68df802885a1b4e578b/transformed/jetified-ui-test-manifest-1.5.4/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/63ae310010eca68df802885a1b4e578b/transformed/jetified-ui-test-manifest-1.5.4/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/3164f3e51f7ae2aa2d7d9b8697ae84df/transformed/jetified-ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/3164f3e51f7ae2aa2d7d9b8697ae84df/transformed/jetified-ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/8dcfe2a94b0574980abc31a6beaa5cd5/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/8dcfe2a94b0574980abc31a6beaa5cd5/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/c1e2805fc99ae332db9658deae51f738/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/c1e2805fc99ae332db9658deae51f738/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.12.0] /Users/conradweeden/.gradle/caches/8.12/transforms/f23ba0ff578484998bd1870ce04b68e8/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.12.0] /Users/conradweeden/.gradle/caches/8.12/transforms/f23ba0ff578484998bd1870ce04b68e8/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/conradweeden/.gradle/caches/8.12/transforms/72ddec9297f10c477ee8be1d41584d70/transformed/room-runtime-2.6.1/AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/conradweeden/.gradle/caches/8.12/transforms/72ddec9297f10c477ee8be1d41584d70/transformed/room-runtime-2.6.1/AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/conradweeden/.gradle/caches/8.12/transforms/73e6e4fffb425e4881e634f831c2e607/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/conradweeden/.gradle/caches/8.12/transforms/73e6e4fffb425e4881e634f831c2e607/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/conradweeden/.gradle/caches/8.12/transforms/4836e9af38a3db946dad80204ad1371f/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/conradweeden/.gradle/caches/8.12/transforms/4836e9af38a3db946dad80204ad1371f/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [org.tensorflow:tensorflow-lite:2.14.0] /Users/conradweeden/.gradle/caches/8.12/transforms/e20c835cb345f79d9fe123c60052280f/transformed/jetified-tensorflow-lite-2.14.0/AndroidManifest.xml:9:5-20
+MERGED from [org.tensorflow:tensorflow-lite:2.14.0] /Users/conradweeden/.gradle/caches/8.12/transforms/e20c835cb345f79d9fe123c60052280f/transformed/jetified-tensorflow-lite-2.14.0/AndroidManifest.xml:9:5-20
+MERGED from [org.tensorflow:tensorflow-lite-api:2.14.0] /Users/conradweeden/.gradle/caches/8.12/transforms/59a93056b915773ce7428fa7abf014c7/transformed/jetified-tensorflow-lite-api-2.14.0/AndroidManifest.xml:9:5-20
+MERGED from [org.tensorflow:tensorflow-lite-api:2.14.0] /Users/conradweeden/.gradle/caches/8.12/transforms/59a93056b915773ce7428fa7abf014c7/transformed/jetified-tensorflow-lite-api-2.14.0/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/conradweeden/.gradle/caches/8.12/transforms/1b9f367ca75d5f4e2ca6dc022c0db0d1/transformed/jetified-image-1.0.0-beta1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/conradweeden/.gradle/caches/8.12/transforms/1b9f367ca75d5f4e2ca6dc022c0db0d1/transformed/jetified-image-1.0.0-beta1/AndroidManifest.xml:7:5-20
+	android:extractNativeLibs
+		INJECTED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.12.0] /Users/conradweeden/.gradle/caches/8.12/transforms/f23ba0ff578484998bd1870ce04b68e8/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:11:9-41
+	android:roundIcon
+		ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:12:9-54
+	android:icon
+		ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:10:9-43
+	android:allowBackup
+		ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:9:9-35
+	android:theme
+		ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:14:9-48
+	android:name
+		ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:8:9-50
+activity#com.example.androidapp.presentation.ui.MainActivity
+ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:16:9-24:20
+	android:exported
+		ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:18:13-36
+	android:theme
+		ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:19:13-52
+	android:name
+		ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:17:13-57
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:20:13-23:29
+action#android.intent.action.MAIN
+ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:22:17-77
+	android:name
+		ADDED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml:22:27-74
+uses-sdk
+INJECTED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml
+INJECTED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml
+MERGED from [androidx.databinding:viewbinding:8.1.4] /Users/conradweeden/.gradle/caches/8.12/transforms/532389a025d3a840e5eb497f38b99e2f/transformed/jetified-viewbinding-8.1.4/AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.1.4] /Users/conradweeden/.gradle/caches/8.12/transforms/532389a025d3a840e5eb497f38b99e2f/transformed/jetified-viewbinding-8.1.4/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.material:material:1.11.0] /Users/conradweeden/.gradle/caches/8.12/transforms/4d881cf1ef41347262229789c28e31a2/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.11.0] /Users/conradweeden/.gradle/caches/8.12/transforms/4d881cf1ef41347262229789c28e31a2/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/conradweeden/.gradle/caches/8.12/transforms/69f3687447468e993b854840f25c649d/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/conradweeden/.gradle/caches/8.12/transforms/69f3687447468e993b854840f25c649d/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil-compose:2.5.0] /Users/conradweeden/.gradle/caches/8.12/transforms/22fc0bc49cdfa4207a47130016e2e999/transformed/jetified-coil-compose-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose:2.5.0] /Users/conradweeden/.gradle/caches/8.12/transforms/22fc0bc49cdfa4207a47130016e2e999/transformed/jetified-coil-compose-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose-base:2.5.0] /Users/conradweeden/.gradle/caches/8.12/transforms/a2a53f0f48db30fb160d5ea75015f470/transformed/jetified-coil-compose-base-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose-base:2.5.0] /Users/conradweeden/.gradle/caches/8.12/transforms/a2a53f0f48db30fb160d5ea75015f470/transformed/jetified-coil-compose-base-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil:2.5.0] /Users/conradweeden/.gradle/caches/8.12/transforms/88c37b1c1f0e42b63b7af32dae92053f/transformed/jetified-coil-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil:2.5.0] /Users/conradweeden/.gradle/caches/8.12/transforms/88c37b1c1f0e42b63b7af32dae92053f/transformed/jetified-coil-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-base:2.5.0] /Users/conradweeden/.gradle/caches/8.12/transforms/81b40b78cc750dbdbe6a11316953fad4/transformed/jetified-coil-base-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-base:2.5.0] /Users/conradweeden/.gradle/caches/8.12/transforms/81b40b78cc750dbdbe6a11316953fad4/transformed/jetified-coil-base-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/conradweeden/.gradle/caches/8.12/transforms/a6639d1a6384f7ecd581564ed990d0d4/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/conradweeden/.gradle/caches/8.12/transforms/a6639d1a6384f7ecd581564ed990d0d4/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/conradweeden/.gradle/caches/8.12/transforms/b79d578c3338cb97d7f2ec2dc4cc59eb/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/conradweeden/.gradle/caches/8.12/transforms/b79d578c3338cb97d7f2ec2dc4cc59eb/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/conradweeden/.gradle/caches/8.12/transforms/fb7213114ed7dee048e1d6f00eb6d57d/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/conradweeden/.gradle/caches/8.12/transforms/fb7213114ed7dee048e1d6f00eb6d57d/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/71194681650def994a9cb573563be1cf/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/71194681650def994a9cb573563be1cf/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/200077497474ac4e00b4c8d92985e9b1/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/200077497474ac4e00b4c8d92985e9b1/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] /Users/conradweeden/.gradle/caches/8.12/transforms/8aab1c7a5fec2e8b6942215455267fa6/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /Users/conradweeden/.gradle/caches/8.12/transforms/8aab1c7a5fec2e8b6942215455267fa6/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/15d4fa9dddde8f1b498bacb1911bb60c/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/15d4fa9dddde8f1b498bacb1911bb60c/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/41db54c92bd5bc64f60553f317a79fa9/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/41db54c92bd5bc64f60553f317a79fa9/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/750d42dac016cb486678cd9a7a90ad7b/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/750d42dac016cb486678cd9a7a90ad7b/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.hilt:hilt-navigation-compose:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/9acfba3210631fb631258df8f39c2e24/transformed/jetified-hilt-navigation-compose-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation-compose:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/9acfba3210631fb631258df8f39c2e24/transformed/jetified-hilt-navigation-compose-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/5ba69c3e8a974b25931b735a0785ec17/transformed/jetified-hilt-navigation-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/5ba69c3e8a974b25931b735a0785ec17/transformed/jetified-hilt-navigation-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common:2.7.6] /Users/conradweeden/.gradle/caches/8.12/transforms/37a4d5ba1f61724cc7362e55aa6ff0e7/transformed/navigation-common-2.7.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.7.6] /Users/conradweeden/.gradle/caches/8.12/transforms/37a4d5ba1f61724cc7362e55aa6ff0e7/transformed/navigation-common-2.7.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.7.6] /Users/conradweeden/.gradle/caches/8.12/transforms/bd83c00a66456362cd9feb7b7618fe6b/transformed/navigation-runtime-2.7.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.7.6] /Users/conradweeden/.gradle/caches/8.12/transforms/bd83c00a66456362cd9feb7b7618fe6b/transformed/navigation-runtime-2.7.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.6] /Users/conradweeden/.gradle/caches/8.12/transforms/f1f6a6c7026f7615d7f9cee455800e56/transformed/navigation-common-ktx-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.6] /Users/conradweeden/.gradle/caches/8.12/transforms/f1f6a6c7026f7615d7f9cee455800e56/transformed/navigation-common-ktx-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.6] /Users/conradweeden/.gradle/caches/8.12/transforms/2c2f0871ed232264a16cf6fb8393b21a/transformed/navigation-runtime-ktx-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.6] /Users/conradweeden/.gradle/caches/8.12/transforms/2c2f0871ed232264a16cf6fb8393b21a/transformed/navigation-runtime-ktx-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.7.6] /Users/conradweeden/.gradle/caches/8.12/transforms/350cc8185c57701f17b500da9e8f4333/transformed/jetified-navigation-compose-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.7.6] /Users/conradweeden/.gradle/caches/8.12/transforms/350cc8185c57701f17b500da9e8f4333/transformed/jetified-navigation-compose-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/855b3e3049aceddbd197f07dbbc9281b/transformed/jetified-material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/855b3e3049aceddbd197f07dbbc9281b/transformed/jetified-material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/9487515b662f9a8ab5d551af097bfb4c/transformed/jetified-material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/9487515b662f9a8ab5d551af097bfb4c/transformed/jetified-material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/b692e1297acd0dce374dd741d4fe19bb/transformed/jetified-material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/b692e1297acd0dce374dd741d4fe19bb/transformed/jetified-material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/41e2f0e080575b306e5d777fc64d0d21/transformed/jetified-foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/41e2f0e080575b306e5d777fc64d0d21/transformed/jetified-foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/c4e92be808d0c4f3de044ef8c160b5b0/transformed/jetified-foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/c4e92be808d0c4f3de044ef8c160b5b0/transformed/jetified-foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/946893e7f966e61f90977193a35bafc1/transformed/jetified-animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/946893e7f966e61f90977193a35bafc1/transformed/jetified-animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/647c567610cc8163b100488f0909ab95/transformed/jetified-animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/647c567610cc8163b100488f0909ab95/transformed/jetified-animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/4bf050affbba706d2e9df9237d59752f/transformed/jetified-ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/4bf050affbba706d2e9df9237d59752f/transformed/jetified-ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/cd188de0ab072160a4d51e6e4dbd0c04/transformed/jetified-ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/cd188de0ab072160a4d51e6e4dbd0c04/transformed/jetified-ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/e17ae8e51231982eb8cf5ef88901fbe3/transformed/jetified-ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/e17ae8e51231982eb8cf5ef88901fbe3/transformed/jetified-ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/d9ac1dd83233516c38a66e4119af577c/transformed/jetified-ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/d9ac1dd83233516c38a66e4119af577c/transformed/jetified-ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/e969b4c26f12d9523b0294644c7c0ad6/transformed/jetified-ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/e969b4c26f12d9523b0294644c7c0ad6/transformed/jetified-ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/c48034d8601e86bcc342e9fe10521191/transformed/jetified-ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/c48034d8601e86bcc342e9fe10521191/transformed/jetified-ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/63ae310010eca68df802885a1b4e578b/transformed/jetified-ui-test-manifest-1.5.4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/63ae310010eca68df802885a1b4e578b/transformed/jetified-ui-test-manifest-1.5.4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/91bf46794da7265aa3190c6b95bc2630/transformed/jetified-ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/91bf46794da7265aa3190c6b95bc2630/transformed/jetified-ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/3164f3e51f7ae2aa2d7d9b8697ae84df/transformed/jetified-ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/3164f3e51f7ae2aa2d7d9b8697ae84df/transformed/jetified-ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:hilt-android:2.48] /Users/conradweeden/.gradle/caches/8.12/transforms/8f6cdb9507c80b76eeb868f219048d40/transformed/jetified-hilt-android-2.48/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:hilt-android:2.48] /Users/conradweeden/.gradle/caches/8.12/transforms/8f6cdb9507c80b76eeb868f219048d40/transformed/jetified-hilt-android-2.48/AndroidManifest.xml:18:3-42
+MERGED from [androidx.activity:activity-ktx:1.8.2] /Users/conradweeden/.gradle/caches/8.12/transforms/0f7c1f4ee8ece6df1958e3a5cd5435e2/transformed/jetified-activity-ktx-1.8.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.2] /Users/conradweeden/.gradle/caches/8.12/transforms/0f7c1f4ee8ece6df1958e3a5cd5435e2/transformed/jetified-activity-ktx-1.8.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.5.1] /Users/conradweeden/.gradle/caches/8.12/transforms/ce687dae8a20ae9ded57c7843431ce8f/transformed/fragment-1.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.1] /Users/conradweeden/.gradle/caches/8.12/transforms/ce687dae8a20ae9ded57c7843431ce8f/transformed/fragment-1.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.8.2] /Users/conradweeden/.gradle/caches/8.12/transforms/bfd2585ee424a0ff084e753ce8f307ab/transformed/jetified-activity-1.8.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.2] /Users/conradweeden/.gradle/caches/8.12/transforms/bfd2585ee424a0ff084e753ce8f307ab/transformed/jetified-activity-1.8.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-compose:1.8.2] /Users/conradweeden/.gradle/caches/8.12/transforms/7516d85ba07423a95af35f84323c12d7/transformed/jetified-activity-compose-1.8.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.8.2] /Users/conradweeden/.gradle/caches/8.12/transforms/7516d85ba07423a95af35f84323c12d7/transformed/jetified-activity-compose-1.8.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/7c5c80d7d350267b573c4f846e485366/transformed/jetified-emoji2-views-helper-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/7c5c80d7d350267b573c4f846e485366/transformed/jetified-emoji2-views-helper-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/8dcfe2a94b0574980abc31a6beaa5cd5/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/8dcfe2a94b0574980abc31a6beaa5cd5/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/c1e2805fc99ae332db9658deae51f738/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/c1e2805fc99ae332db9658deae51f738/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/02e16fd52d8710e8117e7ac9bb68069b/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/02e16fd52d8710e8117e7ac9bb68069b/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/7fd9a336e5d40bd9a21f01e040fe44d0/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/7fd9a336e5d40bd9a21f01e040fe44d0/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/conradweeden/.gradle/caches/8.12/transforms/0e67ffb1a7da955abf514b7cb9f12e46/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/conradweeden/.gradle/caches/8.12/transforms/0e67ffb1a7da955abf514b7cb9f12e46/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/conradweeden/.gradle/caches/8.12/transforms/f1586212294ea13583ac3f06dbd7b32e/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/conradweeden/.gradle/caches/8.12/transforms/f1586212294ea13583ac3f06dbd7b32e/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/9a97e2208b3b7e1449bd9c9189a81061/transformed/jetified-lifecycle-livedata-core-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/9a97e2208b3b7e1449bd9c9189a81061/transformed/jetified-lifecycle-livedata-core-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/aa62de13279aa5ef929f01a7c7858e4a/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/aa62de13279aa5ef929f01a7c7858e4a/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/306d480dd6d401fa70ca6713dc56a4d0/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/306d480dd6d401fa70ca6713dc56a4d0/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/bb3da1612dc1abfc80a010494d41987c/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/bb3da1612dc1abfc80a010494d41987c/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/6e7d8727c11f89586587535ec571d08d/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/6e7d8727c11f89586587535ec571d08d/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/7a0daa6e1d05d11c5bc1bc3c85d060bf/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/7a0daa6e1d05d11c5bc1bc3c85d060bf/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/d10010dd9332b1e3e6b6f0c053e2af2d/transformed/jetified-lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/d10010dd9332b1e3e6b6f0c053e2af2d/transformed/jetified-lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/0c98cf0d9db8031964cbb0441c5ad7ac/transformed/jetified-lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/0c98cf0d9db8031964cbb0441c5ad7ac/transformed/jetified-lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/3a20ac59325e01483271375d70ef9462/transformed/jetified-lifecycle-livedata-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/3a20ac59325e01483271375d70ef9462/transformed/jetified-lifecycle-livedata-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/371c418e59b93ed818d006723195fc83/transformed/jetified-lifecycle-viewmodel-compose-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/371c418e59b93ed818d006723195fc83/transformed/jetified-lifecycle-viewmodel-compose-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] /Users/conradweeden/.gradle/caches/8.12/transforms/651dd1e9eb89163e2ea6684dce16324c/transformed/jetified-accompanist-drawablepainter-0.32.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] /Users/conradweeden/.gradle/caches/8.12/transforms/651dd1e9eb89163e2ea6684dce16324c/transformed/jetified-accompanist-drawablepainter-0.32.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.compose.ui:ui-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/b9de4b13f2e273678dcd7e8934ba7598/transformed/jetified-ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/b9de4b13f2e273678dcd7e8934ba7598/transformed/jetified-ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/c7777f9870251e9263c65b6c4b05699e/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/c7777f9870251e9263c65b6c4b05699e/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/37f9e0a0d2b1a57b815c65d577f90045/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/37f9e0a0d2b1a57b815c65d577f90045/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/938e0685a63e357799360e23c1acc6a1/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/conradweeden/.gradle/caches/8.12/transforms/938e0685a63e357799360e23c1acc6a1/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/ef3dae80051bd90491997fc04cfc1a91/transformed/jetified-autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/ef3dae80051bd90491997fc04cfc1a91/transformed/jetified-autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.12.0] /Users/conradweeden/.gradle/caches/8.12/transforms/f23ba0ff578484998bd1870ce04b68e8/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] /Users/conradweeden/.gradle/caches/8.12/transforms/f23ba0ff578484998bd1870ce04b68e8/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/0a0612d349fff786ac9972bf6fae1054/transformed/jetified-customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/0a0612d349fff786ac9972bf6fae1054/transformed/jetified-customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/conradweeden/.gradle/caches/8.12/transforms/b31cf6296863db200599e3768be49c9d/transformed/jetified-core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/conradweeden/.gradle/caches/8.12/transforms/b31cf6296863db200599e3768be49c9d/transformed/jetified-core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-preferences:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/1d5c1d5469a566e7d9262d1261eebe34/transformed/jetified-datastore-preferences-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.datastore:datastore-preferences:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/1d5c1d5469a566e7d9262d1261eebe34/transformed/jetified-datastore-preferences-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/conradweeden/.gradle/caches/8.12/transforms/72ddec9297f10c477ee8be1d41584d70/transformed/room-runtime-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/conradweeden/.gradle/caches/8.12/transforms/72ddec9297f10c477ee8be1d41584d70/transformed/room-runtime-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] /Users/conradweeden/.gradle/caches/8.12/transforms/e93574afd47683cbd9d4bcb7cb5f0107/transformed/jetified-room-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] /Users/conradweeden/.gradle/caches/8.12/transforms/e93574afd47683cbd9d4bcb7cb5f0107/transformed/jetified-room-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/be735d2ab7e7c2c648da78a6afa6be76/transformed/jetified-datastore-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.datastore:datastore:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/be735d2ab7e7c2c648da78a6afa6be76/transformed/jetified-datastore-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/1bb14c6967c1d0768300440975354d99/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/1bb14c6967c1d0768300440975354d99/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/58abc05b44d946db84e93453897cfd8f/transformed/sqlite-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/58abc05b44d946db84e93453897cfd8f/transformed/sqlite-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/38e6accb5a1c098d24e7d65d828885a4/transformed/jetified-runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/38e6accb5a1c098d24e7d65d828885a4/transformed/jetified-runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/e8f27765401cde75ee23c17c4281befe/transformed/jetified-runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/e8f27765401cde75ee23c17c4281befe/transformed/jetified-runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/conradweeden/.gradle/caches/8.12/transforms/69ce804d4aac718ba90716ac0b680352/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/conradweeden/.gradle/caches/8.12/transforms/69ce804d4aac718ba90716ac0b680352/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] /Users/conradweeden/.gradle/caches/8.12/transforms/f6499b1103a30639c0ce4d7d69e03db4/transformed/jetified-security-crypto-1.1.0-alpha06/AndroidManifest.xml:20:5-44
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] /Users/conradweeden/.gradle/caches/8.12/transforms/f6499b1103a30639c0ce4d7d69e03db4/transformed/jetified-security-crypto-1.1.0-alpha06/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/7db85a04cdc5969c5aa7cff648cd6d02/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/7db85a04cdc5969c5aa7cff648cd6d02/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/6fa514e5aa0cca489977ef425a108a93/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/6fa514e5aa0cca489977ef425a108a93/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/conradweeden/.gradle/caches/8.12/transforms/8841bc118624160ea674c974916659c8/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/conradweeden/.gradle/caches/8.12/transforms/8841bc118624160ea674c974916659c8/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/6bd297128f1f4aaeac67b986ae8e8867/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/6bd297128f1f4aaeac67b986ae8e8867/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/conradweeden/.gradle/caches/8.12/transforms/73e6e4fffb425e4881e634f831c2e607/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/conradweeden/.gradle/caches/8.12/transforms/73e6e4fffb425e4881e634f831c2e607/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/conradweeden/.gradle/caches/8.12/transforms/4836e9af38a3db946dad80204ad1371f/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/conradweeden/.gradle/caches/8.12/transforms/4836e9af38a3db946dad80204ad1371f/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/95165e82bfa7eebe369e8198daeb6ab5/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/95165e82bfa7eebe369e8198daeb6ab5/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/5ff25c24cee3d1875f930fcbdd6b49d8/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/5ff25c24cee3d1875f930fcbdd6b49d8/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/d215d5cf20dab068014f48b2db2b5328/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/d215d5cf20dab068014f48b2db2b5328/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/3035e7cf41df021ea41c39c8a56694a5/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/conradweeden/.gradle/caches/8.12/transforms/3035e7cf41df021ea41c39c8a56694a5/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] /Users/conradweeden/.gradle/caches/8.12/transforms/ee9f15dcef42da9d9f1dc7ae85ff1cb8/transformed/exifinterface-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] /Users/conradweeden/.gradle/caches/8.12/transforms/ee9f15dcef42da9d9f1dc7ae85ff1cb8/transformed/exifinterface-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [org.tensorflow:tensorflow-lite-support:0.4.4] /Users/conradweeden/.gradle/caches/8.12/transforms/5f42b07c8d9b7a92eada6ac8e90dc3e4/transformed/jetified-tensorflow-lite-support-0.4.4/AndroidManifest.xml:4:3-71
+MERGED from [org.tensorflow:tensorflow-lite-support:0.4.4] /Users/conradweeden/.gradle/caches/8.12/transforms/5f42b07c8d9b7a92eada6ac8e90dc3e4/transformed/jetified-tensorflow-lite-support-0.4.4/AndroidManifest.xml:4:3-71
+MERGED from [org.tensorflow:tensorflow-lite:2.14.0] /Users/conradweeden/.gradle/caches/8.12/transforms/e20c835cb345f79d9fe123c60052280f/transformed/jetified-tensorflow-lite-2.14.0/AndroidManifest.xml:6:5-7:38
+MERGED from [org.tensorflow:tensorflow-lite:2.14.0] /Users/conradweeden/.gradle/caches/8.12/transforms/e20c835cb345f79d9fe123c60052280f/transformed/jetified-tensorflow-lite-2.14.0/AndroidManifest.xml:6:5-7:38
+MERGED from [com.google.dagger:dagger-lint-aar:2.48] /Users/conradweeden/.gradle/caches/8.12/transforms/4f213e7432f33d66b8899ed8a0d014c3/transformed/jetified-dagger-lint-aar-2.48/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-lint-aar:2.48] /Users/conradweeden/.gradle/caches/8.12/transforms/4f213e7432f33d66b8899ed8a0d014c3/transformed/jetified-dagger-lint-aar-2.48/AndroidManifest.xml:18:3-42
+MERGED from [org.tensorflow:tensorflow-lite-support-api:0.4.4] /Users/conradweeden/.gradle/caches/8.12/transforms/f6c74df5c46c9d40b5f8179340e1f71d/transformed/jetified-tensorflow-lite-support-api-0.4.4/AndroidManifest.xml:4:3-71
+MERGED from [org.tensorflow:tensorflow-lite-support-api:0.4.4] /Users/conradweeden/.gradle/caches/8.12/transforms/f6c74df5c46c9d40b5f8179340e1f71d/transformed/jetified-tensorflow-lite-support-api-0.4.4/AndroidManifest.xml:4:3-71
+MERGED from [org.tensorflow:tensorflow-lite-api:2.14.0] /Users/conradweeden/.gradle/caches/8.12/transforms/59a93056b915773ce7428fa7abf014c7/transformed/jetified-tensorflow-lite-api-2.14.0/AndroidManifest.xml:6:5-7:38
+MERGED from [org.tensorflow:tensorflow-lite-api:2.14.0] /Users/conradweeden/.gradle/caches/8.12/transforms/59a93056b915773ce7428fa7abf014c7/transformed/jetified-tensorflow-lite-api-2.14.0/AndroidManifest.xml:6:5-7:38
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/conradweeden/.gradle/caches/8.12/transforms/1b9f367ca75d5f4e2ca6dc022c0db0d1/transformed/jetified-image-1.0.0-beta1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/conradweeden/.gradle/caches/8.12/transforms/1b9f367ca75d5f4e2ca6dc022c0db0d1/transformed/jetified-image-1.0.0-beta1/AndroidManifest.xml:5:5-44
+	android:targetSdkVersion
+		INJECTED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/conradweeden/CascadeProjects/androidapp/app/src/main/AndroidManifest.xml
+activity#androidx.activity.ComponentActivity
+ADDED from [androidx.compose.ui:ui-test-manifest:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/63ae310010eca68df802885a1b4e578b/transformed/jetified-ui-test-manifest-1.5.4/AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/63ae310010eca68df802885a1b4e578b/transformed/jetified-ui-test-manifest-1.5.4/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/63ae310010eca68df802885a1b4e578b/transformed/jetified-ui-test-manifest-1.5.4/AndroidManifest.xml:24:13-63
+activity#androidx.compose.ui.tooling.PreviewActivity
+ADDED from [androidx.compose.ui:ui-tooling-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/3164f3e51f7ae2aa2d7d9b8697ae84df/transformed/jetified-ui-tooling-release/AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/3164f3e51f7ae2aa2d7d9b8697ae84df/transformed/jetified-ui-tooling-release/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.5.4] /Users/conradweeden/.gradle/caches/8.12/transforms/3164f3e51f7ae2aa2d7d9b8697ae84df/transformed/jetified-ui-tooling-release/AndroidManifest.xml:24:13-71
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/8dcfe2a94b0574980abc31a6beaa5cd5/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/c1e2805fc99ae332db9658deae51f738/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/c1e2805fc99ae332db9658deae51f738/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/conradweeden/.gradle/caches/8.12/transforms/4836e9af38a3db946dad80204ad1371f/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/conradweeden/.gradle/caches/8.12/transforms/4836e9af38a3db946dad80204ad1371f/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/8dcfe2a94b0574980abc31a6beaa5cd5/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/8dcfe2a94b0574980abc31a6beaa5cd5/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/8dcfe2a94b0574980abc31a6beaa5cd5/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/8dcfe2a94b0574980abc31a6beaa5cd5/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/8dcfe2a94b0574980abc31a6beaa5cd5/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/8dcfe2a94b0574980abc31a6beaa5cd5/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/conradweeden/.gradle/caches/8.12/transforms/8dcfe2a94b0574980abc31a6beaa5cd5/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/c1e2805fc99ae332db9658deae51f738/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/c1e2805fc99ae332db9658deae51f738/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/conradweeden/.gradle/caches/8.12/transforms/c1e2805fc99ae332db9658deae51f738/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/conradweeden/.gradle/caches/8.12/transforms/f23ba0ff578484998bd1870ce04b68e8/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /Users/conradweeden/.gradle/caches/8.12/transforms/f23ba0ff578484998bd1870ce04b68e8/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/conradweeden/.gradle/caches/8.12/transforms/f23ba0ff578484998bd1870ce04b68e8/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+permission#com.example.androidapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/conradweeden/.gradle/caches/8.12/transforms/f23ba0ff578484998bd1870ce04b68e8/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /Users/conradweeden/.gradle/caches/8.12/transforms/f23ba0ff578484998bd1870ce04b68e8/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/conradweeden/.gradle/caches/8.12/transforms/f23ba0ff578484998bd1870ce04b68e8/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/conradweeden/.gradle/caches/8.12/transforms/f23ba0ff578484998bd1870ce04b68e8/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/conradweeden/.gradle/caches/8.12/transforms/f23ba0ff578484998bd1870ce04b68e8/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+uses-permission#com.example.androidapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/conradweeden/.gradle/caches/8.12/transforms/f23ba0ff578484998bd1870ce04b68e8/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/conradweeden/.gradle/caches/8.12/transforms/f23ba0ff578484998bd1870ce04b68e8/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.6.1] /Users/conradweeden/.gradle/caches/8.12/transforms/72ddec9297f10c477ee8be1d41584d70/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/conradweeden/.gradle/caches/8.12/transforms/72ddec9297f10c477ee8be1d41584d70/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/conradweeden/.gradle/caches/8.12/transforms/72ddec9297f10c477ee8be1d41584d70/transformed/room-runtime-2.6.1/AndroidManifest.xml:28:13-60
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/conradweeden/.gradle/caches/8.12/transforms/72ddec9297f10c477ee8be1d41584d70/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/conradweeden/.gradle/caches/8.12/transforms/72ddec9297f10c477ee8be1d41584d70/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/conradweeden/.gradle/caches/8.12/transforms/8a59fac065f7b75effaa479b12af0383/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92

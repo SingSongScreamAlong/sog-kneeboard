@@ -1,0 +1,6 @@
+[
+    {
+        "merged": "com.example.androidapp-mergeReleaseResources-70:/layout/activity_main.xml",
+        "source": "com.example.androidapp-main-72:/layout/activity_main.xml"
+    }
+]
