@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOG PRAIRIE FIRE - PILOT KNEEBOARD MK-VII</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚁</text></svg>">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/multiplayer.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="kneeboard-header">
+            <h1>MACV-SOG VIETNAM</h1>
+            <div class="status-indicator" id="statusIndicator">
+                <span class="status-dot"></span>
+                <span id="statusText">COMM CHECK...</span>
+            </div>
+        </header>
+
+        <!-- Compact Control Strip -->
+        <div class="control-strip">
+            <div class="quick-controls">
+                <select id="markerType" title="Target Type">
+                    <option value="mil_dot">📍 OBS POST</option>
+                    <option value="mil_box">🏭 FIREBASE</option>
+                    <option value="mil_triangle">🚁 LZ/DZ</option>
+                    <option value="mil_arrow">👥 ENEMY MVMT</option>
+                    <option value="mil_flag">🚩 CHECKPOINT</option>
+                </select>
+                
+                <select id="markerColor" title="Priority">
+                    <option value="ColorRed">🔴 HOSTILE</option>
+                    <option value="ColorBlue">🔵 FRIENDLY</option>
+                    <option value="ColorGreen">🟢 SECURE</option>
+                    <option value="ColorYellow">🟡 CAUTION</option>
+                    <option value="ColorOrange">🟠 URGENT</option>
+                </select>
+                
+                <input type="text" id="markerText" placeholder="QUICK INTEL..." maxlength="50">
+                <input type="text" id="playerUID" placeholder="CALLSIGN" maxlength="20">
+            </div>
+            
+            <div class="map-controls">
+                <button id="centerOnPlayer" title="Center on Player">📍 ME</button>
+                <button id="toggleFollow" title="Follow Player">📡 TRACK</button>
+                <button id="toggleOrientation" title="Orient Map">🧭 ORIENT</button>
+                <button id="toggleDraw" title="Drawing Mode">✏️ DRAW</button>
+                <button id="clearDrawing" title="Clear All Drawing">🗑️ CLEAR</button>
+                <select id="markerScope" title="Scope">
+                    <option value="self">SELF</option>
+                    <option value="group">SQUAD</option>
+                    <option value="side">BATTALION</option>
+                    <option value="global">ALL</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Map Container - Primary Focus -->
+        <div id="mapContainer">
+            <div id="map"></div>
+            
+            <!-- Drawing Canvas Overlay -->
+            <canvas id="drawingCanvas" class="drawing-layer"></canvas>
+            
+            <!-- Drawing Tools Menu -->
+            <div id="drawingToolsMenu" class="drawing-tools-menu">
+                <div class="tools-header">
+                    <span class="tools-title">🛠️ FIELD MARKINGS</span>
+                    <button id="toggleToolsMenu" class="tools-toggle">📋</button>
+                </div>
+                
+                <div class="tools-content" id="toolsContent">
+                    <div class="tool-section">
+                        <label class="tool-label">WRITING INSTRUMENT</label>
+                        <div class="tool-buttons">
+                            <button id="toolPencil" class="tool-btn active" data-tool="pencil" title="Field Pencil">✏️ PENCIL</button>
+                            <button id="toolPen" class="tool-btn" data-tool="pen" title="Tactical Pen">🖊️ PEN</button>
+                            <button id="toolMarker" class="tool-btn" data-tool="marker" title="Map Marker">🖍️ MARKER</button>
+                            <button id="toolEraser" class="tool-btn" data-tool="eraser" title="Field Eraser">🧽 ERASE</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-section">
+                        <label class="tool-label">INK COLOR</label>
+                        <div class="color-buttons">
+                            <button class="color-btn active" data-color="#2c1810" style="background: #2c1810;" title="Field Black">⬛</button>
+                            <button class="color-btn" data-color="#8b0000" style="background: #8b0000;" title="Enemy Red">🟥</button>
+                            <button class="color-btn" data-color="#006400" style="background: #006400;" title="Friendly Green">🟩</button>
+                            <button class="color-btn" data-color="#000080" style="background: #000080;" title="Intel Blue">🟦</button>
+                            <button class="color-btn" data-color="#ffa500" style="background: #ffa500;" title="Caution Orange">🟧</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-section">
+                        <label class="tool-label">LINE WEIGHT</label>
+                        <div class="size-buttons">
+                            <button class="size-btn" data-size="1" title="Fine Line">●</button>
+                            <button class="size-btn active" data-size="2" title="Standard">●</button>
+                            <button class="size-btn" data-size="4" title="Medium">●</button>
+                            <button class="size-btn" data-size="6" title="Thick">●</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-section">
+                        <button id="clearAllDrawing" class="action-btn">🗑️ CLEAR ALL</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Player Position Indicator -->
+            <div class="player-indicator" id="playerIndicator">
+                <div class="player-dot"></div>
+                <div class="player-heading" id="playerHeading"></div>
+            </div>
+            
+            <!-- Compact Info Overlay -->
+            <div class="map-info">
+                <div class="position-display">
+                    <div class="grid-ref" id="gridReference">GRID: 000-000</div>
+                    <div class="coords" id="coordinates">UTM: [0, 0]</div>
+                    <div class="heading" id="headingDisplay">HDG: 000°</div>
+                </div>
+                
+                <div class="tracking-status" id="trackingStatus">
+                    <span class="follow-indicator" id="followIndicator">📡 TRACKING OFF</span>
+                    <span class="orientation-indicator" id="orientationIndicator">🧭 NORTH UP</span>
+                    <span class="draw-indicator" id="drawIndicator">✏️ DRAW OFF</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Minimal Footer -->
+        <div class="footer-strip">
+            <span class="quick-help">1 FINGER: DRAW/TAP • 2 FINGERS: PAN/ZOOM • T: TOOLS • 1-4: PENCIL/PEN/MARKER/ERASER</span>
+        </div>
+    </div>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <!-- Socket.IO for multiplayer -->
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/app.js"></script>
+    <script src="js/apple-pencil-multiplayer.js"></script>
+</body>
+</html>

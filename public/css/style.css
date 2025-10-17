@@ -1,0 +1,675 @@
+/* Map-Focused Tactical Kneeboard CSS */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Special+Elite&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier Prime', 'Courier New', monospace;
+    background: #8B7355;
+    color: #2c1810;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Paper texture overlay */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 25% 75%, rgba(139, 115, 85, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 75% 25%, rgba(139, 115, 85, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Main clipboard container - Map focused */
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: 
+        radial-gradient(ellipse at 15% 85%, rgba(139, 115, 85, 0.08) 0%, transparent 25%),
+        radial-gradient(ellipse at 85% 15%, rgba(160, 130, 90, 0.06) 0%, transparent 20%),
+        linear-gradient(135deg, #f6f3ea 0%, #f4f1e8 50%, #f2efdb 100%);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid #d4c4a8;
+}
+
+/* Compact header */
+.kneeboard-header {
+    background: linear-gradient(180deg, #2c2c2c 0%, #404040 50%, #2c2c2c 100%);
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #1a1a1a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.kneeboard-header::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -6px;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 12px;
+    background: linear-gradient(180deg, #666 0%, #333 50%, #666 100%);
+    border-radius: 6px 6px 1px 1px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.kneeboard-header h1 {
+    font-family: 'Special Elite', monospace;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #f4f1e8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.7rem;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 4px 8px;
+    border-radius: 8px;
+    color: #f4f1e8;
+    font-family: 'Special Elite', monospace;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ff4444;
+    border: 1px solid #333;
+    animation: pulse 2s infinite;
+}
+
+.status-dot.connected {
+    background: #44ff44;
+    animation: none;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Compact control strip */
+.control-strip {
+    background: inherit;
+    padding: 12px 20px;
+    border-bottom: 2px solid #d4c4a8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: relative;
+}
+
+.control-strip::before {
+    content: 'TACTICAL CONTROL PANEL';
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    background: #2c1810;
+    color: #f4f1e8;
+    font-family: 'Special Elite', monospace;
+    font-size: 0.6rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    transform: rotate(-0.5deg);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
+}
+
+.quick-controls {
+    display: flex;
+    gap: 12px;
+    flex: 1;
+    align-items: center;
+}
+
+.map-controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.quick-controls select,
+.quick-controls input,
+.map-controls select {
+    padding: 8px 10px;
+    border: none;
+    border-bottom: 2px solid #8B7355;
+    background: transparent;
+    color: #2c1810;
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.8rem;
+    font-weight: 600;
+    min-height: 36px;
+    text-transform: uppercase;
+}
+
+.quick-controls select:focus,
+.quick-controls input:focus,
+.map-controls select:focus {
+    outline: none;
+    border-bottom-color: #2c1810;
+    background: rgba(44, 24, 16, 0.05);
+}
+
+.map-controls button {
+    padding: 8px 12px;
+    border: 2px solid #8B7355;
+    background: rgba(244, 241, 232, 0.9);
+    color: #2c1810;
+    font-family: 'Special Elite', monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+    min-height: 36px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.map-controls button:hover {
+    background: #e8dcc0;
+    border-color: #2c1810;
+}
+
+.map-controls button.active {
+    background: #2c1810;
+    color: #f4f1e8;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Map container - Primary focus (80% of screen) */
+#mapContainer {
+    flex: 1;
+    position: relative;
+    background: inherit;
+    border: 3px solid #8B7355;
+    margin: 8px 15px;
+    box-shadow: inset 0 0 20px rgba(139, 115, 85, 0.2);
+    min-height: 70vh;
+}
+
+#mapContainer::before {
+    content: 'TACTICAL SITUATION MAP - VIETNAM AO';
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    background: #f4f1e8;
+    color: #2c1810;
+    font-family: 'Special Elite', monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    z-index: 1001;
+    border: 1px solid #8B7355;
+    letter-spacing: 1px;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+
+/* Drawing canvas overlay */
+.drawing-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+    pointer-events: none;
+    touch-action: none;
+}
+
+.drawing-layer.active {
+    pointer-events: all;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="2" fill="%23000"/></svg>') 8 8, crosshair;
+}
+
+/* Drawing Tools Menu */
+.drawing-tools-menu {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(246, 243, 234, 0.98);
+    border: 3px solid #8B7355;
+    border-radius: 5px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+    z-index: 1001;
+    font-family: 'Special Elite', monospace;
+    max-width: 280px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.drawing-tools-menu.active {
+    transform: translateX(0);
+}
+
+.tools-header {
+    background: linear-gradient(180deg, #2c2c2c 0%, #404040 50%, #2c2c2c 100%);
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #8B7355;
+}
+
+.tools-title {
+    color: #f4f1e8;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.tools-toggle {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #666;
+    color: #f4f1e8;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-family: 'Special Elite', monospace;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tools-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #888;
+}
+
+.tools-content {
+    padding: 12px;
+    display: none;
+}
+
+.tools-content.active {
+    display: block;
+}
+
+.tool-section {
+    margin-bottom: 12px;
+}
+
+.tool-section:last-child {
+    margin-bottom: 0;
+}
+
+.tool-label {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #2c1810;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.tool-buttons,
+.color-buttons,
+.size-buttons {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.tool-btn,
+.color-btn,
+.size-btn,
+.action-btn {
+    padding: 6px 10px;
+    border: 2px solid #8B7355;
+    background: rgba(244, 241, 232, 0.9);
+    color: #2c1810;
+    font-family: 'Special Elite', monospace;
+    font-size: 0.6rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.tool-btn:hover,
+.color-btn:hover,
+.size-btn:hover,
+.action-btn:hover {
+    background: #e8dcc0;
+    border-color: #2c1810;
+}
+
+.tool-btn.active,
+.color-btn.active,
+.size-btn.active {
+    background: #2c1810;
+    color: #f4f1e8;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.color-btn {
+    width: 36px;
+    height: 32px;
+    padding: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.color-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.size-btn {
+    width: 40px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.size-btn[data-size="1"] { font-size: 0.5rem; }
+.size-btn[data-size="2"] { font-size: 0.7rem; }
+.size-btn[data-size="4"] { font-size: 0.9rem; }
+.size-btn[data-size="6"] { font-size: 1.1rem; }
+
+.action-btn {
+    width: 100%;
+    padding: 8px;
+    background: #8b0000;
+    color: #f4f1e8;
+    border-color: #660000;
+}
+
+.action-btn:hover {
+    background: #a00000;
+    border-color: #2c1810;
+}
+
+/* Player position indicator */
+.player-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    pointer-events: none;
+    display: none;
+}
+
+.player-indicator.active {
+    display: block;
+}
+
+.player-dot {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #00ff00, #008800);
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 
+        0 0 15px rgba(0, 255, 0, 0.6),
+        0 0 25px rgba(0, 255, 0, 0.3);
+    animation: playerPulse 2s infinite;
+}
+
+.player-heading {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 20px solid #ffff00;
+    filter: drop-shadow(0 0 3px rgba(255, 255, 0, 0.8));
+}
+
+@keyframes playerPulse {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% { 
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* Compact map info overlay */
+.map-info {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(246, 243, 234, 0.95);
+    padding: 12px;
+    border: 2px solid #8B7355;
+    z-index: 1000;
+    border-radius: 3px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    font-family: 'Courier Prime', monospace;
+    min-width: 200px;
+}
+
+.position-display {
+    margin-bottom: 8px;
+}
+
+.grid-ref,
+.coords,
+.heading {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin: 2px 0;
+    color: #2c1810;
+    letter-spacing: 0.5px;
+}
+
+.grid-ref { color: #006600; }
+.coords { color: #000088; }
+.heading { color: #880000; }
+
+.tracking-status {
+    border-top: 1px solid #8B7355;
+    padding-top: 6px;
+    font-size: 0.7rem;
+}
+
+.follow-indicator,
+.orientation-indicator {
+    display: block;
+    margin: 2px 0;
+    font-weight: 600;
+}
+
+.follow-indicator.active { color: #006600; }
+.orientation-indicator.active { color: #880000; }
+
+.draw-indicator {
+    display: block;
+    margin: 2px 0;
+    font-weight: 600;
+}
+
+.draw-indicator.active { color: #8b4513; }
+
+/* Minimal footer */
+.footer-strip {
+    background: inherit;
+    padding: 8px 20px;
+    border-top: 2px solid #8B7355;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #2c1810;
+    font-family: 'Special Elite', monospace;
+    letter-spacing: 0.5px;
+}
+
+/* Leaflet map styling */
+.leaflet-container {
+    background: #f8f5f0 !important;
+}
+
+.leaflet-popup-content-wrapper {
+    background: #f4f1e8 !important;
+    color: #2c1810 !important;
+    border: 2px solid #8B7355 !important;
+    font-family: 'Courier Prime', monospace !important;
+    font-weight: 600 !important;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+.leaflet-popup-tip {
+    background: #f4f1e8 !important;
+    border: 1px solid #8B7355 !important;
+}
+
+.leaflet-control-zoom a {
+    background: #f4f1e8 !important;
+    color: #2c1810 !important;
+    border: 2px solid #8B7355 !important;
+    font-family: 'Special Elite', monospace !important;
+    font-weight: 700 !important;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+.leaflet-control-zoom a:hover {
+    background: #e8dcc0 !important;
+    border-color: #2c1810 !important;
+}
+
+/* Custom markers */
+.custom-marker {
+    width: 18px !important;
+    height: 18px !important;
+    border-radius: 50%;
+    border: 2px solid #2c1810;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.custom-marker::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background: #2c1810;
+    border-radius: 50%;
+}
+
+.marker-red { background: #dc3545; }
+.marker-blue { background: #007bff; }
+.marker-green { background: #28a745; }
+.marker-yellow { background: #ffc107; }
+.marker-orange { background: #fd7e14; }
+.marker-pink { background: #e83e8c; }
+.marker-white { background: #f8f9fa; }
+.marker-black { background: #343a40; }
+
+/* Responsive design - iPad focused */
+@media (max-width: 1024px) {
+    .control-strip {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 15px;
+    }
+    
+    .quick-controls {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+    
+    .quick-controls select,
+    .quick-controls input {
+        width: 100%;
+    }
+    
+    .map-controls {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    #mapContainer {
+        margin: 5px 10px;
+        min-height: 60vh;
+    }
+    
+    .map-info {
+        top: 10px;
+        right: 10px;
+        padding: 8px;
+        min-width: 160px;
+    }
+}
+
+@media (max-width: 768px) {
+    .kneeboard-header h1 {
+        font-size: 1rem;
+    }
+    
+    .control-strip {
+        padding: 8px 12px;
+    }
+    
+    .map-controls button {
+        font-size: 0.6rem;
+        padding: 6px 8px;
+    }
+    
+    .quick-controls select,
+    .quick-controls input {
+        font-size: 0.75rem;
+        padding: 6px 8px;
+    }
+    
+    #mapContainer {
+        min-height: 55vh;
+    }
+}

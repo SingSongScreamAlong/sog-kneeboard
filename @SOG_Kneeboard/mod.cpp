@@ -1,0 +1,12 @@
+name = "SOG Kneeboard Integration";
+picture = "sog_kneeboard_logo.paa";
+actionName = "Website";
+action = "https://github.com/SingSongScreamAlong/sog-kneeboard";
+description = "Real-time tactical kneeboard integration for S.O.G. Prairie Fire. Syncs player position, heading, and markers with external iPad kneeboard interface.";
+logo = "sog_kneeboard_logo.paa";
+logoOver = "sog_kneeboard_logo.paa";
+tooltip = "SOG Kneeboard";
+tooltipOwned = "SOG Kneeboard - Owned";
+overview = "Vietnam War tactical kneeboard with real-time position tracking and marker synchronization for helicopter pilots and ground units.";
+author = "SOG Development Team";
+overviewPicture = "sog_kneeboard_overview.paa";

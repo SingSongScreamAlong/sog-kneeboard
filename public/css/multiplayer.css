@@ -1,0 +1,275 @@
+/* Multiplayer & Apple Pencil Enhancements */
+
+/* Player List */
+.player-list {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: rgba(44, 24, 16, 0.95);
+    border: 2px solid #8B7355;
+    border-radius: 4px;
+    padding: 0;
+    min-width: 200px;
+    max-width: 300px;
+    z-index: 9999;
+    font-family: 'Courier Prime', monospace;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.player-list-header {
+    background: #8B7355;
+    color: #f6f3ea;
+    padding: 8px 12px;
+    font-weight: bold;
+    font-size: 12px;
+    border-bottom: 2px solid #2c1810;
+    text-align: center;
+}
+
+.player-list-content {
+    padding: 8px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.player-item {
+    padding: 6px 8px;
+    font-size: 11px;
+    color: #00ff00;
+    border-bottom: 1px solid rgba(139, 115, 85, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.player-item:last-child {
+    border-bottom: none;
+}
+
+.player-item:hover {
+    background: rgba(139, 115, 85, 0.2);
+}
+
+/* Player Label (temporary) */
+.player-label {
+    animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* Remote Player Markers */
+.remote-player-marker {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+/* Apple Pencil Cursor Enhancement */
+.drawing-layer.apple-pencil-active {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="%2300ff00" opacity="0.5"/><circle cx="12" cy="12" r="1" fill="%2300ff00"/></svg>') 12 12, crosshair;
+}
+
+/* Pressure Indicator (optional visual feedback) */
+.pressure-indicator {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(44, 24, 16, 0.9);
+    border: 2px solid #8B7355;
+    border-radius: 4px;
+    padding: 8px 12px;
+    color: #00ff00;
+    font-family: 'Courier Prime', monospace;
+    font-size: 11px;
+    z-index: 9999;
+    display: none;
+}
+
+.pressure-indicator.active {
+    display: block;
+}
+
+.pressure-bar {
+    width: 100px;
+    height: 6px;
+    background: #2c1810;
+    border: 1px solid #8B7355;
+    margin-top: 4px;
+    position: relative;
+}
+
+.pressure-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00ff00, #ffeb3b, #ff5722);
+    transition: width 0.1s ease;
+}
+
+/* Multiplayer Connection Status */
+.multiplayer-status {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    background: rgba(44, 24, 16, 0.9);
+    border: 2px solid #8B7355;
+    border-radius: 4px;
+    padding: 6px 12px;
+    color: #00ff00;
+    font-family: 'Courier Prime', monospace;
+    font-size: 10px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.multiplayer-status.connected::before {
+    content: '●';
+    color: #00ff00;
+    animation: blink 2s ease-in-out infinite;
+}
+
+.multiplayer-status.disconnected::before {
+    content: '●';
+    color: #ff5722;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* Drawing Attribution */
+.drawing-attribution {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: #00ff00;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 9px;
+    font-family: monospace;
+    pointer-events: none;
+    z-index: 10000;
+    white-space: nowrap;
+}
+
+/* Collaborative Cursor (show other players' cursors) */
+.remote-cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    pointer-events: none;
+    z-index: 10000;
+    transition: all 0.1s ease;
+}
+
+.remote-cursor::after {
+    content: attr(data-player);
+    position: absolute;
+    top: 25px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    white-space: nowrap;
+    font-family: monospace;
+}
+
+/* Mobile/Tablet Optimizations */
+@media (max-width: 768px) {
+    .player-list {
+        top: 60px;
+        right: 10px;
+        min-width: 150px;
+        font-size: 10px;
+    }
+    
+    .player-list-header {
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+    
+    .player-item {
+        padding: 4px 6px;
+        font-size: 9px;
+    }
+}
+
+/* iPad Specific */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .player-list {
+        top: 70px;
+        right: 15px;
+    }
+}
+
+/* Touch Feedback for Apple Pencil */
+.touch-feedback {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 255, 0, 0.3), transparent);
+    pointer-events: none;
+    z-index: 10000;
+    animation: touchRipple 0.6s ease-out;
+}
+
+@keyframes touchRipple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* Undo/Redo Buttons */
+.drawing-history-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 8px;
+    z-index: 9999;
+}
+
+.history-btn {
+    background: rgba(44, 24, 16, 0.9);
+    border: 2px solid #8B7355;
+    color: #00ff00;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.history-btn:hover {
+    background: #8B7355;
+    color: #f6f3ea;
+    transform: translateY(-2px);
+}
+
+.history-btn:active {
+    transform: translateY(0);
+}
+
+.history-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
