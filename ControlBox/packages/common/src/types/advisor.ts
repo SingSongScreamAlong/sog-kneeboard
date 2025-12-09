@@ -1,6 +1,10 @@
 // =====================================================================
 // Steward Advisor Types
 // AI-assisted advisory guidance for incident review
+// 
+// IMPORTANT: iRacing's SDK is READ-ONLY for external applications.
+// ControlBox can NEVER control the sim, throw flags, or apply penalties.
+// All advisor outputs are RECOMMENDATIONS for human stewards only.
 // =====================================================================
 
 /**
@@ -35,8 +39,22 @@ export interface AlternativeOutcome {
 }
 
 /**
+ * Suggested flag state (ADVISORY ONLY - ControlBox cannot control iRacing)
+ * This is purely informational for stewards to consider.
+ */
+export type SuggestedFlagState =
+    | 'GREEN'           // No action needed, racing continues
+    | 'LOCAL_YELLOW'    // Suggest local caution at incident location
+    | 'FULL_CAUTION'    // Suggest full course caution
+    | 'NO_CHANGE'       // No flag state change recommended
+    | 'UNCLEAR';        // Insufficient data to suggest flag state
+
+/**
  * Structured advice from steward advisor
- * Advisors NEVER apply penalties or control flags — they only advise
+ * 
+ * CRITICAL: Advisors NEVER apply penalties or control flags.
+ * iRacing's SDK does not allow external control of the simulation.
+ * All advice is purely informational for human steward decision-making.
  */
 export interface StewardAdvice {
     /** Unique advice identifier */
@@ -53,6 +71,11 @@ export interface StewardAdvice {
     alternatives: AlternativeOutcome[];
     /** Flags indicating special conditions */
     flags: AdvisorFlag[];
+    /** 
+     * Suggested flag state (ADVISORY ONLY)
+     * ControlBox cannot control iRacing — this is purely for steward reference
+     */
+    suggestedFlagState?: SuggestedFlagState;
     /** ISO timestamp when advice was generated */
     generatedAt: string;
 }

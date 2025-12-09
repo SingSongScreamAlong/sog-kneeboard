@@ -1,7 +1,13 @@
 // =====================================================================
 // Steward Advisor Service
 // AI-assisted advisory guidance for incident review
-// Advisors NEVER apply penalties or control flags — they only advise
+//
+// IMPORTANT: iRacing's SDK is READ-ONLY for external applications.
+// ControlBox can NEVER control the simulation — no throwing flags,
+// no applying penalties, no modifying game state.
+//
+// Advisors provide RECOMMENDATIONS ONLY for human stewards.
+// This includes suggested flag states, which are purely informational.
 // =====================================================================
 
 import { v4 as uuid } from 'uuid';
@@ -10,6 +16,7 @@ import type {
     AdvisorFlag,
     AlternativeOutcome,
     AdvisorConfidence
+    // SuggestedFlagState available for future flag state recommendations
 } from '@controlbox/common';
 import type { Rule, IncidentEvent } from '@controlbox/common';
 
