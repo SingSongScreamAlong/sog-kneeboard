@@ -1,0 +1,384 @@
+// =====================================================================
+// Prisma Schema for ControlBox
+// Database models for sessions, incidents, penalties, and more
+// =====================================================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ========================
+// Session Management
+// ========================
+
+model Session {
+  id              String   @id @default(cuid())
+  name            String
+  trackName       String
+  trackId         String?
+  sessionType     String   // practice, qualifying, race
+  status          String   @default("pending") // pending, active, completed
+  
+  driverCount     Int      @default(0)
+  incidentCount   Int      @default(0)
+  penaltyCount    Int      @default(0)
+  
+  scheduledAt     DateTime?
+  startedAt       DateTime?
+  endedAt         DateTime?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relations
+  drivers         SessionDriver[]
+  incidents       Incident[]
+  penalties       Penalty[]
+  recommendations Recommendation[]
+  messages        Message[]
+  results         SessionResult[]
+
+  // Season relation
+  seasonId        String?
+  season          Season?  @relation(fields: [seasonId], references: [id])
+  roundNumber     Int?
+
+  @@index([status])
+  @@index([seasonId])
+}
+
+model SessionDriver {
+  id          String   @id @default(cuid())
+  sessionId   String
+  session     Session  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  
+  driverId    String
+  driver      Driver   @relation(fields: [driverId], references: [id])
+  
+  carNumber   String
+  carName     String?
+  teamId      String?
+  team        Team?    @relation(fields: [teamId], references: [id])
+  
+  position    Int?
+  isActive    Boolean  @default(true)
+  joinedAt    DateTime @default(now())
+
+  @@unique([sessionId, driverId])
+}
+
+model SessionResult {
+  id          String   @id @default(cuid())
+  sessionId   String
+  session     Session  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  
+  driverId    String
+  driver      Driver   @relation(fields: [driverId], references: [id])
+  
+  position    Int
+  carNumber   String
+  laps        Int
+  gapToLeader String?
+  bestLapTime Int?     // in milliseconds
+  avgLapTime  Int?
+  
+  points      Int      @default(0)
+  bonusPoints Int      @default(0)
+  
+  status      String   // finished, dnf, dsq, dns
+  createdAt   DateTime @default(now())
+
+  @@unique([sessionId, driverId])
+  @@index([sessionId])
+}
+
+// ========================
+// Driver & Team Management
+// ========================
+
+model Driver {
+  id              String   @id @default(cuid())
+  iracingId       String?  @unique
+  name            String
+  displayName     String?
+  
+  iRating         Int?
+  safetyRating    Float?
+  licenseClass    String?
+  
+  totalRaces      Int      @default(0)
+  totalWins       Int      @default(0)
+  totalPodiums    Int      @default(0)
+  totalIncidents  Int      @default(0)
+  totalPenalties  Int      @default(0)
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relations
+  sessions        SessionDriver[]
+  results         SessionResult[]
+  incidentsAs1    Incident[] @relation("IncidentDriver1")
+  incidentsAs2    Incident[] @relation("IncidentDriver2")
+  penalties       Penalty[]
+  messages        Message[]
+  seasonStandings SeasonStanding[]
+
+  @@index([name])
+  @@index([iracingId])
+}
+
+model Team {
+  id          String   @id @default(cuid())
+  name        String
+  shortName   String?
+  color       String?
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  drivers     SessionDriver[]
+  standings   TeamStanding[]
+}
+
+// ========================
+// Incident Management
+// ========================
+
+model Incident {
+  id              String   @id @default(cuid())
+  sessionId       String
+  session         Session  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  
+  type            String   // contact, off_track, spin, etc.
+  contactType     String?  // rear_end, side_to_side, etc.
+  severity        String   // light, medium, heavy
+  severityScore   Int      @default(0)
+  
+  lapNumber       Int
+  sessionTimeMs   Int
+  trackPosition   Float?
+  cornerName      String?
+  
+  driver1Id       String
+  driver1         Driver   @relation("IncidentDriver1", fields: [driver1Id], references: [id])
+  driver1CarNum   String?
+  driver1Fault    Float?   // 0.0 - 1.0
+  
+  driver2Id       String?
+  driver2         Driver?  @relation("IncidentDriver2", fields: [driver2Id], references: [id])
+  driver2CarNum   String?
+  driver2Fault    Float?
+  
+  status          String   @default("pending") // pending, under_review, reviewed, dismissed
+  reviewedBy      String?
+  reviewedAt      DateTime?
+  stewardNotes    String?
+  
+  replayTimestamp Int?
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relations
+  penalties       Penalty[]
+  recommendation  Recommendation?
+
+  @@index([sessionId])
+  @@index([status])
+  @@index([driver1Id])
+}
+
+// ========================
+// Penalty Management
+// ========================
+
+model Penalty {
+  id          String   @id @default(cuid())
+  sessionId   String
+  session     Session  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  
+  driverId    String
+  driver      Driver   @relation(fields: [driverId], references: [id])
+  
+  incidentId  String?
+  incident    Incident? @relation(fields: [incidentId], references: [id])
+  
+  type        String   // warning, time_penalty, position_penalty, disqualification
+  value       Int?     // seconds for time penalty, positions for position penalty
+  
+  reason      String
+  status      String   @default("proposed") // proposed, confirmed, served, appealed
+  
+  issuedBy    String?
+  issuedAt    DateTime @default(now())
+  servedAt    DateTime?
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([sessionId])
+  @@index([driverId])
+}
+
+// ========================
+// Recommendation System
+// ========================
+
+model Recommendation {
+  id              String   @id @default(cuid())
+  sessionId       String
+  session         Session  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  
+  incidentId      String?  @unique
+  incident        Incident? @relation(fields: [incidentId], references: [id])
+  
+  recommendedStatus String  // GREEN, LOCAL_YELLOW, FULL_COURSE_YELLOW, etc.
+  confidence      String   // LOW, MEDIUM, HIGH
+  reasoning       String
+  severityScore   Int
+  
+  lapNumber       Int
+  sessionTimeMs   Int
+  
+  status          String   @default("pending") // pending, decided
+  action          String?  // ACCEPT, OVERRIDE, DISMISS, DEFER_TO_POST_RACE
+  overrideStatus  String?
+  
+  decidedBy       String?
+  decidedAt       DateTime?
+  notes           String?
+  
+  createdAt       DateTime @default(now())
+
+  @@index([sessionId])
+  @@index([status])
+}
+
+// ========================
+// Messaging
+// ========================
+
+model Message {
+  id          String   @id @default(cuid())
+  sessionId   String
+  session     Session  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  
+  senderId    String
+  senderName  String
+  senderRole  String   // steward, race_control
+  
+  recipientId String?
+  recipient   Driver?  @relation(fields: [recipientId], references: [id])
+  
+  type        String   // direct, broadcast, warning, penalty_notice
+  subject     String?
+  content     String
+  
+  isRead      Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  @@index([sessionId])
+  @@index([recipientId])
+}
+
+// ========================
+// Season Management
+// ========================
+
+model Season {
+  id          String   @id @default(cuid())
+  name        String
+  year        Int
+  status      String   @default("upcoming") // upcoming, active, completed
+  
+  totalRounds Int      @default(0)
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  sessions    Session[]
+  standings   SeasonStanding[]
+  teamStandings TeamStanding[]
+}
+
+model SeasonStanding {
+  id          String   @id @default(cuid())
+  seasonId    String
+  season      Season   @relation(fields: [seasonId], references: [id], onDelete: Cascade)
+  
+  driverId    String
+  driver      Driver   @relation(fields: [driverId], references: [id])
+  
+  position    Int
+  points      Int      @default(0)
+  wins        Int      @default(0)
+  podiums     Int      @default(0)
+  top5s       Int      @default(0)
+  top10s      Int      @default(0)
+  dnfs        Int      @default(0)
+  
+  updatedAt   DateTime @updatedAt
+
+  @@unique([seasonId, driverId])
+  @@index([seasonId])
+}
+
+model TeamStanding {
+  id          String   @id @default(cuid())
+  seasonId    String
+  season      Season   @relation(fields: [seasonId], references: [id], onDelete: Cascade)
+  
+  teamId      String
+  team        Team     @relation(fields: [teamId], references: [id])
+  
+  position    Int
+  points      Int      @default(0)
+  wins        Int      @default(0)
+  
+  updatedAt   DateTime @updatedAt
+
+  @@unique([seasonId, teamId])
+}
+
+// ========================
+// Steward & Audit
+// ========================
+
+model Steward {
+  id          String   @id @default(cuid())
+  name        String
+  email       String?  @unique
+  role        String   @default("steward") // head_steward, steward, observer
+  
+  isActive    Boolean  @default(true)
+  lastActiveAt DateTime?
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model AuditLog {
+  id          String   @id @default(cuid())
+  sessionId   String?
+  
+  action      String   // incident_reviewed, penalty_issued, recommendation_accepted, etc.
+  entityType  String   // incident, penalty, recommendation, session
+  entityId    String
+  
+  performedBy String
+  performedByName String
+  
+  details     Json?
+  
+  createdAt   DateTime @default(now())
+
+  @@index([sessionId])
+  @@index([entityType, entityId])
+}

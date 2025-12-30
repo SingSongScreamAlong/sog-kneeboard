@@ -1,0 +1,261 @@
+/* =====================================================================
+   BlackBox Team View Styles (Week 7)
+   ===================================================================== */
+
+.blackbox-team {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #0a0a0f;
+    color: #e0e0e0;
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.blackbox-team__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(180deg, #1a1a2e 0%, #0f0f1a 100%);
+    border-bottom: 1px solid #2a2a3e;
+}
+
+.blackbox-team__header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.connection-status {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Session Selector */
+.session-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 1rem;
+}
+
+.session-selector input {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    background: #1a1a2e;
+    border: 1px solid #3a3a5e;
+    border-radius: 8px;
+    color: white;
+    width: 300px;
+}
+
+.session-selector input:focus {
+    outline: none;
+    border-color: #00d4ff;
+}
+
+/* Timing Board */
+.timing-board {
+    flex: 1;
+    overflow: auto;
+    padding: 1rem;
+}
+
+.timing-board table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.timing-board th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    background: #1a1a2e;
+    color: #888;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    position: sticky;
+    top: 0;
+}
+
+.timing-board td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #2a2a3e;
+}
+
+.timing-board tr {
+    transition: background 0.15s ease;
+}
+
+.timing-board tr:hover {
+    background: rgba(0, 212, 255, 0.05);
+    cursor: pointer;
+}
+
+.timing-board tr.selected {
+    background: rgba(0, 212, 255, 0.1);
+    border-left: 3px solid #00d4ff;
+}
+
+.timing-board tr.in-pit {
+    opacity: 0.6;
+}
+
+.timing-board tr.has-incident {
+    background: rgba(255, 100, 100, 0.1);
+}
+
+.timing-board .pos {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #00d4ff;
+    width: 50px;
+}
+
+.timing-board .driver {
+    font-weight: 500;
+}
+
+.timing-board .gap {
+    font-family: 'JetBrains Mono', monospace;
+    color: #ffcc00;
+}
+
+.timing-board .last-lap,
+.timing-board .best-lap {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.timing-board .best-lap {
+    color: #a855f7;
+}
+
+.timing-board .speed {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.pit-badge {
+    background: #f97316;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.625rem;
+    font-weight: 600;
+}
+
+.incident-badge {
+    background: #ef4444;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.625rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+.burst-btn {
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    color: white;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.burst-btn:hover {
+    transform: scale(1.05);
+}
+
+.burst-btn:active {
+    transform: scale(0.98);
+}
+
+/* Driver Panel */
+.driver-panel {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 360px;
+    background: #1a1a2e;
+    border-left: 1px solid #3a3a5e;
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.driver-panel__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #3a3a5e;
+}
+
+.driver-panel__header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.driver-panel__header button {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.driver-panel__content {
+    flex: 1;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.driver-panel .stat {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.driver-panel .stat label {
+    display: block;
+    font-size: 0.75rem;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.driver-panel .stat value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.driver-panel__actions {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #3a3a5e;
+}
+
+.driver-panel__actions button {
+    width: 100%;
+    background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+}
