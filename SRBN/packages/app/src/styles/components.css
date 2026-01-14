@@ -1,0 +1,273 @@
+/* =====================================================================
+   Component Styles
+   Shared component styles
+   ===================================================================== */
+
+/* =====================================================================
+   Buttons
+   ===================================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--bb-space-sm);
+    padding: var(--bb-space-sm) var(--bb-space-md);
+    font-family: var(--bb-font-display);
+    font-size: var(--bb-text-sm);
+    font-weight: 500;
+    border: none;
+    border-radius: var(--bb-radius-md);
+    cursor: pointer;
+    transition: all var(--bb-transition-fast);
+    outline: none;
+}
+
+.btn:focus-visible {
+    box-shadow: 0 0 0 2px var(--bb-blue);
+}
+
+.btn--primary {
+    background-color: var(--bb-orange);
+    color: var(--bb-black);
+}
+
+.btn--primary:hover {
+    background-color: #ff8556;
+}
+
+.btn--secondary {
+    background-color: var(--bb-light-gray);
+    color: var(--bb-text-primary);
+}
+
+.btn--secondary:hover {
+    background-color: var(--bb-border-gray);
+}
+
+.btn--ghost {
+    background-color: transparent;
+    color: var(--bb-text-secondary);
+}
+
+.btn--ghost:hover {
+    background-color: var(--bb-light-gray);
+    color: var(--bb-text-primary);
+}
+
+.btn--icon {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+}
+
+.btn--active {
+    background-color: var(--bb-orange-dim);
+    color: var(--bb-orange);
+    border: 1px solid var(--bb-orange);
+}
+
+/* =====================================================================
+   Status Badges
+   ===================================================================== */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--bb-space-xs);
+    padding: 2px var(--bb-space-sm);
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-xs);
+    font-weight: 500;
+    border-radius: var(--bb-radius-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge--green {
+    background-color: var(--bb-green-dim);
+    color: var(--bb-green);
+}
+
+.badge--yellow {
+    background-color: var(--bb-yellow-dim);
+    color: var(--bb-yellow);
+}
+
+.badge--red {
+    background-color: var(--bb-red-dim);
+    color: var(--bb-red);
+}
+
+.badge--blue {
+    background-color: var(--bb-blue-dim);
+    color: var(--bb-blue);
+}
+
+.badge--orange {
+    background-color: var(--bb-orange-dim);
+    color: var(--bb-orange);
+}
+
+/* =====================================================================
+   Flag Indicators
+   ===================================================================== */
+
+.flag-indicator {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-sm);
+    padding: var(--bb-space-xs) var(--bb-space-md);
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-sm);
+    font-weight: 600;
+    border-radius: var(--bb-radius-md);
+    text-transform: uppercase;
+}
+
+.flag-indicator--green {
+    background-color: var(--bb-green);
+    color: var(--bb-black);
+}
+
+.flag-indicator--yellow {
+    background-color: var(--bb-yellow);
+    color: var(--bb-black);
+}
+
+.flag-indicator--red {
+    background-color: var(--bb-red);
+    color: white;
+}
+
+.flag-indicator--checkered {
+    background: repeating-conic-gradient(#fff 0deg 90deg, #000 90deg 180deg) 0 0/10px 10px;
+    color: transparent;
+    min-width: 48px;
+}
+
+/* =====================================================================
+   Slider Controls
+   ===================================================================== */
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    background: var(--bb-light-gray);
+    border-radius: 2px;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: var(--bb-orange);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform var(--bb-transition-fast);
+}
+
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* =====================================================================
+   Toggle Switch
+   ===================================================================== */
+
+.toggle {
+    position: relative;
+    width: 40px;
+    height: 22px;
+    background: var(--bb-light-gray);
+    border-radius: 11px;
+    cursor: pointer;
+    transition: background var(--bb-transition-fast);
+}
+
+.toggle::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    background: var(--bb-text-secondary);
+    border-radius: 50%;
+    transition: all var(--bb-transition-fast);
+}
+
+.toggle--active {
+    background: var(--bb-orange-dim);
+}
+
+.toggle--active::after {
+    left: 20px;
+    background: var(--bb-orange);
+}
+
+/* =====================================================================
+   Tire Compound Icons
+   ===================================================================== */
+
+.tire-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-xs);
+    font-weight: 700;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+}
+
+.tire-icon--soft {
+    color: var(--bb-tire-soft);
+}
+
+.tire-icon--medium {
+    color: var(--bb-tire-medium);
+}
+
+.tire-icon--hard {
+    color: var(--bb-tire-hard);
+}
+
+.tire-icon--inter {
+    color: var(--bb-tire-inter);
+}
+
+.tire-icon--wet {
+    color: var(--bb-tire-wet);
+}
+
+/* =====================================================================
+   AI Suggestion Pulse
+   ===================================================================== */
+
+.ai-highlight {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.ai-suggestion-indicator {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-xs);
+    padding: var(--bb-space-xs) var(--bb-space-sm);
+    background: var(--bb-orange-dim);
+    border: 1px solid var(--bb-orange);
+    border-radius: var(--bb-radius-md);
+    font-size: var(--bb-text-xs);
+    color: var(--bb-orange);
+}
+
+.ai-suggestion-indicator__confidence {
+    font-family: var(--bb-font-mono);
+    font-weight: 600;
+}

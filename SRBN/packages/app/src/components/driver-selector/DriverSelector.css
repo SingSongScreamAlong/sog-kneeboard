@@ -1,0 +1,124 @@
+/* =====================================================================
+   DriverSelector Styles
+   ===================================================================== */
+
+.driver-selector {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: var(--bb-text-primary);
+}
+
+.selector-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--bb-space-md);
+    height: 32px;
+    background-color: var(--bb-mid-gray);
+    border-bottom: 1px solid var(--bb-border-gray);
+    font-size: var(--bb-text-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--bb-text-secondary);
+}
+
+.selector-list {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    /* 1px gaps for button borders */
+    padding: var(--bb-space-sm);
+    overflow-x: auto;
+    height: calc(100% - 32px);
+    scrollbar-width: thin;
+}
+
+/* Driver Chip Button */
+.driver-chip {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-sm);
+    height: 64px;
+    min-width: 180px;
+    padding: 0 var(--bb-space-md);
+    background-color: var(--bb-dark-gray);
+    border: 1px solid var(--bb-border-gray);
+    border-radius: var(--bb-radius-md);
+    color: var(--bb-text-secondary);
+    cursor: pointer;
+    transition: all var(--bb-transition-fast);
+    position: relative;
+    overflow: hidden;
+    margin-right: var(--bb-space-xs);
+}
+
+.driver-chip:hover {
+    background-color: var(--bb-mid-gray);
+    border-color: var(--bb-text-muted);
+}
+
+.driver-chip--selected {
+    background-color: var(--bb-light-gray);
+    border-color: var(--bb-orange);
+    color: var(--bb-text-primary);
+    box-shadow: inset 0 0 0 1px var(--bb-orange);
+}
+
+.driver-chip--suggested {
+    border-color: var(--bb-blue);
+    box-shadow: 0 0 8px var(--bb-blue-dim);
+}
+
+/* Chip Internals */
+.chip-pos {
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-sm);
+    color: var(--bb-text-muted);
+    width: 24px;
+}
+
+.driver-chip--selected .chip-pos {
+    color: var(--bb-orange);
+}
+
+.chip-num {
+    font-family: var(--bb-font-display);
+    font-weight: 800;
+    font-size: var(--bb-text-lg);
+    font-style: italic;
+    color: var(--bb-white);
+}
+
+.chip-name {
+    font-weight: 600;
+    font-size: var(--bb-text-base);
+    flex: 1;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chip-badge {
+    padding: 2px 4px;
+    background-color: var(--bb-purple);
+    color: #fff;
+    font-size: 10px;
+    border-radius: 2px;
+    font-weight: 700;
+}
+
+.chip-battle {
+    color: var(--bb-orange);
+    animation: battle-pulse 1.5s infinite;
+}
+
+.chip-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0 0 12px var(--bb-blue-glow);
+    animation: pulse-glow 2s infinite;
+    pointer-events: none;
+}

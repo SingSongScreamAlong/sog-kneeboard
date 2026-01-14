@@ -1,0 +1,17 @@
+{
+    "name": "@broadcastbox/common",
+    "version": "0.1.0-alpha",
+    "description": "Shared types and constants for BroadcastBox",
+    "type": "module",
+    "main": "./src/index.ts",
+    "types": "./src/index.ts",
+    "exports": {
+        ".": "./src/index.ts"
+    },
+    "scripts": {
+        "typecheck": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "typescript": "^5.3.3"
+    }
+}

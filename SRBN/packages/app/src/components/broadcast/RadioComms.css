@@ -1,0 +1,161 @@
+/* =====================================================================
+   RadioComms Styles - F1-style team radio captions
+   ===================================================================== */
+
+.radio-comms {
+    position: absolute;
+    bottom: 80px;
+    left: var(--bb-space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--bb-space-sm);
+    z-index: 100;
+    pointer-events: none;
+}
+
+.radio-message {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 450px;
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba(20, 20, 20, 0.95) 100%);
+    border-radius: var(--bb-radius-md);
+    overflow: hidden;
+    animation: slide-in-radio 0.4s ease-out;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.radio-message--fading {
+    animation: fade-out-radio 0.5s ease-out forwards;
+}
+
+@keyframes slide-in-radio {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out-radio {
+    to {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+}
+
+/* Team color accent bar */
+.radio-accent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--team-color, var(--bb-orange));
+}
+
+/* Header with source and driver */
+.radio-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--bb-space-sm) var(--bb-space-md);
+    padding-left: calc(var(--bb-space-md) + 4px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.radio-source {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-xs);
+}
+
+.source-icon {
+    font-size: var(--bb-text-sm);
+}
+
+.source-label {
+    font-family: var(--bb-font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--bb-text-secondary);
+    letter-spacing: 0.1em;
+}
+
+.radio-driver {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-sm);
+}
+
+.driver-number {
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-sm);
+    font-weight: 700;
+    color: var(--team-color, var(--bb-orange));
+}
+
+.driver-name {
+    font-weight: 600;
+    font-size: var(--bb-text-sm);
+    color: var(--bb-text-primary);
+}
+
+/* Message content */
+.radio-content {
+    padding: var(--bb-space-md);
+    padding-left: calc(var(--bb-space-md) + 4px);
+}
+
+.radio-text {
+    font-size: var(--bb-text-base);
+    color: var(--bb-text-primary);
+    line-height: 1.4;
+    font-style: italic;
+}
+
+/* Typing indicator for live transcription */
+.radio-typing {
+    display: flex;
+    gap: 4px;
+    padding: var(--bb-space-sm) var(--bb-space-md);
+}
+
+.radio-typing span {
+    width: 6px;
+    height: 6px;
+    background-color: var(--bb-text-muted);
+    border-radius: 50%;
+    animation: typing-pulse 1.4s ease-in-out infinite;
+}
+
+.radio-typing span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.radio-typing span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing-pulse {
+
+    0%,
+    60%,
+    100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

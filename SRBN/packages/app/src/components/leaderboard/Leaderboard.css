@@ -1,0 +1,220 @@
+/* =====================================================================
+   Leaderboard Styles
+   Vertical sidebar layout
+   ===================================================================== */
+
+.leaderboard {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bb-dark-gray);
+    color: var(--bb-text-primary);
+    flex: 1;
+    overflow: hidden;
+    min-height: 0;
+}
+
+/* Header */
+.leaderboard__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--bb-space-sm) var(--bb-space-md);
+    background-color: var(--bb-mid-gray);
+    border-bottom: 1px solid var(--bb-border-gray);
+    flex-shrink: 0;
+}
+
+.leaderboard__title {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-sm);
+    font-size: var(--bb-text-xs);
+    font-weight: 600;
+    color: var(--bb-text-secondary);
+}
+
+.title-icon {
+    color: var(--bb-orange);
+}
+
+.leaderboard__meta {
+    display: flex;
+    gap: var(--bb-space-md);
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-xs);
+    color: var(--bb-text-muted);
+}
+
+/* Table */
+.leaderboard__table {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background-color: var(--bb-dark-gray);
+    color: var(--bb-text-muted);
+    font-size: 10px;
+    font-weight: 600;
+    text-align: left;
+    padding: var(--bb-space-xs) var(--bb-space-sm);
+    border-bottom: 1px solid var(--bb-border-gray);
+    z-index: 10;
+}
+
+td {
+    padding: 6px var(--bb-space-sm);
+    font-size: var(--bb-text-sm);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    white-space: nowrap;
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+}
+
+.row--selected {
+    background-color: var(--bb-orange-dim);
+}
+
+.row--battle {
+    background-color: rgba(255, 107, 0, 0.1);
+}
+
+/* Column Widths & Styles */
+.col-pos {
+    width: 32px;
+    text-align: center;
+    padding-right: 0;
+}
+
+.pos-badge {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: var(--bb-radius-sm);
+    font-family: var(--bb-font-mono);
+    font-weight: 700;
+    background-color: var(--bb-light-gray);
+    color: var(--bb-text-muted);
+}
+
+.pos-badge--p1 {
+    background-color: var(--bb-purple);
+    color: #fff;
+}
+
+.pos-badge--p2 {
+    background-color: var(--bb-text-primary);
+    color: #000;
+}
+
+.pos-badge--p3 {
+    background-color: var(--bb-orange);
+    color: #000;
+}
+
+.col-num {
+    width: 30px;
+    text-align: right;
+    font-family: var(--bb-font-display);
+    font-weight: 800;
+    font-style: italic;
+    color: var(--bb-text-muted);
+}
+
+.col-name {
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+}
+
+.col-tire {
+    width: 24px;
+    text-align: center;
+    padding: 0;
+}
+
+.tire-badge {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--bb-black);
+    text-align: center;
+}
+
+.tire-badge--soft {
+    background-color: var(--bb-tire-soft);
+}
+
+.tire-badge--medium {
+    background-color: var(--bb-tire-medium);
+}
+
+.tire-badge--hard {
+    background-color: var(--bb-tire-hard);
+}
+
+.tire-badge--intermediate {
+    background-color: var(--bb-tire-inter);
+}
+
+.tire-badge--wet {
+    background-color: var(--bb-tire-wet);
+    color: white;
+}
+
+.col-gap-prev {
+    width: 50px;
+    text-align: right;
+    font-family: var(--bb-font-mono);
+    color: var(--bb-text-secondary);
+}
+
+/* Hide extra columns for compact vertical view */
+.col-class,
+.col-pit,
+.col-gap-leader {
+    display: none;
+}
+
+/* Footer */
+.leaderboard__footer {
+    padding: var(--bb-space-xs) var(--bb-space-md);
+    font-size: 10px;
+    color: var(--bb-text-muted);
+    border-top: 1px solid var(--bb-border-gray);
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-brand {
+    font-weight: 700;
+    color: var(--bb-orange);
+}
+
+.footer-product {
+    color: var(--bb-text-secondary);
+}
+
+.footer-indicator {
+    margin-left: auto;
+    color: var(--bb-blue);
+}

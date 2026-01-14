@@ -1,0 +1,181 @@
+/* =====================================================================
+   Layout Styles
+   Main application layout grid
+   ===================================================================== */
+
+.app-layout {
+    display: grid;
+    grid-template-rows: var(--bb-topbar-height) 1fr;
+    grid-template-columns: var(--bb-left-column-width) 1fr var(--bb-right-column-width);
+    grid-template-areas:
+        "topbar topbar topbar"
+        "left center right";
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bb-black);
+    gap: 1px;
+}
+
+/* =====================================================================
+   Panel Base Styles
+   ===================================================================== */
+
+.panel {
+    background-color: var(--bb-dark-gray);
+    overflow: hidden;
+}
+
+.panel--topbar {
+    grid-area: topbar;
+    border-bottom: 1px solid var(--bb-border-gray);
+}
+
+.panel--left {
+    grid-area: left;
+    border-right: 1px solid var(--bb-border-gray);
+    overflow-y: auto;
+}
+
+.panel--center {
+    grid-area: center;
+    position: relative;
+}
+
+.panel--right {
+    grid-area: right;
+    border-left: 1px solid var(--bb-border-gray);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* =====================================================================
+   Section Headers
+   ===================================================================== */
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--bb-space-sm) var(--bb-space-md);
+    background-color: var(--bb-mid-gray);
+    border-bottom: 1px solid var(--bb-border-gray);
+    font-size: var(--bb-text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--bb-text-secondary);
+}
+
+.section-header__badge {
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-xs);
+    padding: 2px 6px;
+    border-radius: var(--bb-radius-sm);
+    background-color: var(--bb-light-gray);
+    color: var(--bb-text-muted);
+}
+
+/* =====================================================================
+   Advanced Options Panel (Overlay)
+   ===================================================================== */
+
+.advanced-options-overlay {
+    position: fixed;
+    top: var(--bb-topbar-height);
+    right: 0;
+    bottom: 0;
+    width: 360px;
+    background-color: var(--bb-dark-gray);
+    border-left: 1px solid var(--bb-border-gray);
+    z-index: 100;
+    box-shadow: var(--bb-shadow-lg);
+    animation: slide-in-right var(--bb-transition-normal);
+    overflow-y: auto;
+}
+
+.advanced-options-overlay.hidden {
+    display: none;
+}
+
+/* =====================================================================
+   Loading State
+   ===================================================================== */
+
+.app-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bb-black);
+    color: var(--bb-text-secondary);
+    gap: var(--bb-space-md);
+    font-family: var(--bb-font-mono);
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--bb-border-gray);
+    border-top-color: var(--bb-orange);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =====================================================================
+   Live Data Animations
+   ===================================================================== */
+
+@keyframes pulse-live {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
+.live-indicator {
+    animation: pulse-live 2s ease-in-out infinite;
+}
+
+@keyframes position-change {
+    0% {
+        background-color: var(--bb-green-dim);
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+.position-change-up {
+    animation: position-change 1s ease-out;
+}
+
+@keyframes battle-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 var(--bb-orange-glow);
+    }
+
+    50% {
+        box-shadow: 0 0 10px 3px var(--bb-orange-glow);
+    }
+}
+
+.battle-active {
+    animation: battle-pulse 1.5s ease-in-out infinite;
+}

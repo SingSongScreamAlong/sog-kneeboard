@@ -1,0 +1,215 @@
+/* =====================================================================
+   DriverTile Styles
+   ===================================================================== */
+
+.driver-tile {
+    display: flex;
+    flex-direction: column;
+    gap: var(--bb-space-xs);
+    padding: var(--bb-space-sm);
+    background-color: var(--bb-mid-gray);
+    border: 1px solid var(--bb-border-gray);
+    border-radius: var(--bb-radius-md);
+    cursor: pointer;
+    transition: all var(--bb-transition-fast);
+    position: relative;
+}
+
+.driver-tile:hover {
+    background-color: var(--bb-light-gray);
+    border-color: var(--bb-text-muted);
+}
+
+.driver-tile--selected {
+    background-color: var(--bb-orange-dim);
+    border-color: var(--bb-orange);
+}
+
+.driver-tile--selected:hover {
+    background-color: var(--bb-orange-dim);
+}
+
+/* Thumbnail - Larger window */
+.driver-tile__thumbnail {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: var(--bb-radius-sm);
+    overflow: hidden;
+    background-color: var(--bb-dark-gray);
+}
+
+.thumbnail-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--bb-dark-gray) 0%, var(--bb-mid-gray) 100%);
+}
+
+.thumbnail-car-num {
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-2xl);
+    font-weight: 700;
+    color: var(--bb-text-muted);
+}
+
+.battle-indicator {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: var(--bb-text-sm);
+    background-color: var(--bb-yellow);
+    color: var(--bb-black);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 700;
+}
+
+/* Info Section - Below thumbnail */
+.driver-tile__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--bb-space-xs);
+    min-width: 0;
+}
+
+.driver-tile__header {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-sm);
+}
+
+.position-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 var(--bb-space-xs);
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-sm);
+    font-weight: 700;
+    border-radius: var(--bb-radius-sm);
+    background-color: var(--bb-light-gray);
+    color: var(--bb-text-primary);
+}
+
+.position-badge--p1 {
+    background-color: var(--bb-yellow);
+    color: var(--bb-black);
+}
+
+.position-badge--p2 {
+    background-color: var(--bb-text-secondary);
+    color: var(--bb-black);
+}
+
+.position-badge--p3 {
+    background-color: #cd7f32;
+    color: var(--bb-black);
+}
+
+.driver-name {
+    font-weight: 600;
+    font-size: var(--bb-text-base);
+    color: var(--bb-text-primary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.gap-value {
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-sm);
+    color: var(--bb-text-secondary);
+    margin-left: auto;
+}
+
+/* Details Row */
+.driver-tile__details {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-md);
+    font-size: var(--bb-text-xs);
+}
+
+.tire-info {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-xs);
+}
+
+.tire-info .tire-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    font-family: var(--bb-font-mono);
+    font-weight: 700;
+    border-radius: 2px;
+    font-size: 10px;
+}
+
+.tire-info--soft .tire-icon {
+    background-color: var(--bb-tire-soft);
+    color: white;
+}
+
+.tire-info--medium .tire-icon {
+    background-color: var(--bb-tire-medium);
+    color: var(--bb-black);
+}
+
+.tire-info--hard .tire-icon {
+    background-color: var(--bb-tire-hard);
+    color: var(--bb-black);
+}
+
+.tire-laps {
+    font-family: var(--bb-font-mono);
+    color: var(--bb-text-muted);
+}
+
+.pit-status {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-xs);
+    color: var(--bb-text-muted);
+}
+
+.pit-status--active {
+    color: var(--bb-yellow);
+}
+
+.pit-count {
+    font-family: var(--bb-font-mono);
+}
+
+/* Keyboard Shortcut */
+.driver-tile__shortcut {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--bb-font-mono);
+    font-size: 9px;
+    font-weight: 600;
+    background-color: var(--bb-dark-gray);
+    border: 1px solid var(--bb-border-gray);
+    border-radius: 2px;
+    color: var(--bb-text-muted);
+}
+
+.driver-tile:hover .driver-tile__shortcut {
+    background-color: var(--bb-orange-dim);
+    border-color: var(--bb-orange);
+    color: var(--bb-orange);
+}

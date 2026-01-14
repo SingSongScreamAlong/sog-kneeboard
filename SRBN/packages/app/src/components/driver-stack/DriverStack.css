@@ -1,0 +1,33 @@
+/* =====================================================================
+   DriverStack Styles
+   ===================================================================== */
+
+.driver-stack {
+    display: flex;
+    flex-direction: column;
+}
+
+.driver-stack__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--bb-space-sm);
+    padding: var(--bb-space-sm);
+    flex: 1;
+    overflow-y: auto;
+}
+
+.driver-stack__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--bb-text-muted);
+    text-align: center;
+    padding: var(--bb-space-xl);
+}
+
+.driver-stack__empty .text-muted {
+    font-size: var(--bb-text-sm);
+    margin-top: var(--bb-space-xs);
+}

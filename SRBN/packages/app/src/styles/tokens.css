@@ -1,0 +1,211 @@
+/* =====================================================================
+   Ok, Box Box Design Tokens
+   BroadcastBox - Professional Broadcast Control
+   Matches reference mockup exactly
+   ===================================================================== */
+
+:root {
+    /* Base Colors - Dark motorsport aesthetic */
+    --bb-black: #0a0a0a;
+    --bb-dark-gray: #121212;
+    --bb-mid-gray: #1a1a1a;
+    --bb-light-gray: #252525;
+    --bb-border-gray: #333333;
+    --bb-text-primary: #ffffff;
+    --bb-text-secondary: #b0b0b0;
+    --bb-text-muted: #666666;
+
+    /* Brand Colors - From logo (three stripes) */
+    --bb-brand-black: #000000;
+    --bb-brand-blue: #2255ff;
+    --bb-brand-orange: #ff6b00;
+
+    /* Accent Colors */
+    --bb-orange: #ff6b00;
+    --bb-orange-dim: rgba(255, 107, 0, 0.15);
+    --bb-orange-glow: rgba(255, 107, 0, 0.4);
+    --bb-blue: #2255ff;
+    --bb-blue-dim: rgba(34, 85, 255, 0.15);
+    --bb-blue-glow: rgba(34, 85, 255, 0.4);
+
+    /* Status Colors */
+    --bb-green: #00cc66;
+    --bb-green-dim: rgba(0, 204, 102, 0.15);
+    --bb-yellow: #ffcc00;
+    --bb-yellow-dim: rgba(255, 204, 0, 0.15);
+    --bb-red: #ff3355;
+    --bb-red-dim: rgba(255, 51, 85, 0.15);
+    --bb-purple: #9966ff;
+    --bb-caution-yellow: #e6b800;
+
+    /* Tire Compound Colors (matches F1 style) */
+    --bb-tire-soft: #ff3355;
+    --bb-tire-medium: #ffcc00;
+    --bb-tire-hard: #ffffff;
+    --bb-tire-inter: #00cc66;
+    --bb-tire-wet: #2255ff;
+
+    /* Typography */
+    --bb-font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --bb-font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+
+    /* Font Sizes */
+    --bb-text-xs: 0.625rem;
+    /* 10px */
+    --bb-text-sm: 0.75rem;
+    /* 12px */
+    --bb-text-base: 0.875rem;
+    /* 14px */
+    --bb-text-lg: 1rem;
+    /* 16px */
+    --bb-text-xl: 1.25rem;
+    /* 20px */
+    --bb-text-2xl: 1.5rem;
+    /* 24px */
+    --bb-text-3xl: 2rem;
+    /* 32px */
+
+    /* Spacing */
+    --bb-space-xs: 0.25rem;
+    /* 4px */
+    --bb-space-sm: 0.5rem;
+    /* 8px */
+    --bb-space-md: 0.75rem;
+    /* 12px */
+    --bb-space-lg: 1rem;
+    /* 16px */
+    --bb-space-xl: 1.5rem;
+    /* 24px */
+    --bb-space-2xl: 2rem;
+    /* 32px */
+
+    /* Border Radius */
+    --bb-radius-sm: 3px;
+    --bb-radius-md: 4px;
+    --bb-radius-lg: 6px;
+    --bb-radius-xl: 8px;
+
+    /* Shadows */
+    --bb-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+    --bb-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.5);
+    --bb-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.6);
+    --bb-shadow-glow-orange: 0 0 20px var(--bb-orange-glow);
+    --bb-shadow-glow-blue: 0 0 20px var(--bb-blue-glow);
+
+    /* Transitions */
+    --bb-transition-fast: 100ms ease-out;
+    --bb-transition-normal: 200ms ease-out;
+    --bb-transition-slow: 300ms ease-out;
+
+    /* Layout */
+    --bb-topbar-height: 48px;
+    --bb-leaderboard-height: 140px;
+    --bb-leaderboard-height-expanded: 280px;
+    --bb-left-column-width: 280px;
+    --bb-right-column-width: 320px;
+}
+
+/* =====================================================================
+   Base Styles
+   ===================================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--bb-font-display);
+    font-size: var(--bb-text-base);
+    color: var(--bb-text-primary);
+    background-color: var(--bb-black);
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+#root {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =====================================================================
+   Common Utilities
+   ===================================================================== */
+
+.mono {
+    font-family: var(--bb-font-mono);
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bb-dark-gray);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bb-border-gray);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--bb-text-muted);
+}
+
+/* =====================================================================
+   Animation Keyframes
+   ===================================================================== */
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 var(--bb-orange-dim);
+    }
+
+    50% {
+        box-shadow: 0 0 16px 4px var(--bb-orange-glow);
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

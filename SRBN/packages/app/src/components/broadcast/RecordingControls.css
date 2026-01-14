@@ -1,0 +1,129 @@
+/* =====================================================================
+   Recording Controls Styles
+   ===================================================================== */
+
+.recording-controls {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bb-dark-gray);
+    border-radius: var(--bb-radius-md);
+    overflow: hidden;
+}
+
+.recording-controls__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--bb-space-sm) var(--bb-space-md);
+    background-color: var(--bb-mid-gray);
+    border-bottom: 1px solid var(--bb-border-gray);
+}
+
+.recording-controls__title {
+    font-size: var(--bb-text-xs);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--bb-text-secondary);
+}
+
+.recording-controls__timer {
+    font-size: var(--bb-text-sm);
+    font-family: var(--bb-font-mono);
+    color: var(--bb-red);
+    animation: pulse-live 1s ease-in-out infinite;
+}
+
+.recording-controls__actions {
+    padding: var(--bb-space-md);
+}
+
+.recording-controls__btn {
+    width: 100%;
+    padding: var(--bb-space-md);
+    border: none;
+    border-radius: var(--bb-radius-sm);
+    font-size: var(--bb-text-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--bb-transition-fast);
+}
+
+.recording-controls__btn--record {
+    background-color: var(--bb-red);
+    color: white;
+}
+
+.recording-controls__btn--record:hover {
+    background-color: #cc0000;
+}
+
+.recording-controls__btn--stop {
+    background-color: var(--bb-mid-gray);
+    color: var(--bb-red);
+    border: 2px solid var(--bb-red);
+}
+
+.recording-controls__btn--stop:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.recording-controls__settings {
+    display: flex;
+    flex-direction: column;
+    gap: var(--bb-space-sm);
+    padding: 0 var(--bb-space-md) var(--bb-space-md);
+}
+
+.recording-controls__setting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--bb-space-md);
+}
+
+.recording-controls__setting label {
+    font-size: var(--bb-text-xs);
+    color: var(--bb-text-secondary);
+}
+
+.recording-controls__setting select {
+    padding: var(--bb-space-xs) var(--bb-space-sm);
+    background-color: var(--bb-mid-gray);
+    border: 1px solid var(--bb-border-gray);
+    border-radius: var(--bb-radius-sm);
+    color: var(--bb-text-primary);
+    font-size: var(--bb-text-xs);
+    font-family: var(--bb-font-mono);
+}
+
+.recording-controls__outputs {
+    padding: var(--bb-space-sm) var(--bb-space-md);
+    border-top: 1px solid var(--bb-border-gray);
+}
+
+.recording-controls__output-title {
+    font-size: var(--bb-text-xs);
+    font-weight: 600;
+    color: var(--bb-text-muted);
+    margin-bottom: var(--bb-space-xs);
+}
+
+.recording-controls__output {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-sm);
+    padding: var(--bb-space-xs) 0;
+}
+
+.recording-controls__output-name {
+    flex: 1;
+    font-size: var(--bb-text-sm);
+    color: var(--bb-text-primary);
+}
+
+.recording-controls__output-status {
+    font-size: var(--bb-text-xs);
+    font-family: var(--bb-font-mono);
+    color: var(--bb-text-muted);
+    text-transform: uppercase;
+}

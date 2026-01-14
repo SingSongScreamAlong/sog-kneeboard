@@ -1,0 +1,32 @@
+{
+  "name": "broadcastbox",
+  "version": "0.1.0-alpha",
+  "description": "BroadcastBox - Professional Broadcast Control for Sim Racing",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=packages/app",
+    "dev:mock": "npm run dev --workspace=packages/mock-server",
+    "dev:all": "concurrently \"npm run dev\" \"npm run dev:mock\"",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces --if-present",
+    "test:e2e": "npx playwright test",
+    "test:e2e:ui": "npx playwright test --ui",
+    "test:e2e:headed": "npx playwright test --headed",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "clean": "rm -rf node_modules packages/*/node_modules packages/*/dist"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "author": "OKBoxBox",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
+  }
+}

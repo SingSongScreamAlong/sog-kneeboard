@@ -1,0 +1,291 @@
+/* =====================================================================
+   MainFeed Styles
+   ===================================================================== */
+
+.main-feed {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+/* Video Area */
+.main-feed__video {
+    flex: 1;
+    position: relative;
+    background-color: var(--bb-black);
+    min-height: 0;
+}
+
+/* Context Area (below video) */
+.main-feed__context {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background-color: var(--bb-border-gray);
+    border-top: 1px solid var(--bb-border-gray);
+    max-height: 200px;
+    overflow-y: auto;
+    transition: border-color 0.5s ease;
+}
+
+/* =====================================================================
+   Session State Awareness - Ambient UI Feel Changes
+   ===================================================================== */
+
+/* GREEN FLAG - Normal racing, calm feel */
+.main-feed--race_green,
+.main-feed--green {
+    /* Subtle green tint on edges */
+}
+
+.main-feed--race_green .main-feed__context,
+.main-feed--green .main-feed__context {
+    border-top-color: var(--bb-green);
+}
+
+/* CAUTION - Yellow flag, heightened awareness */
+.main-feed--caution {
+    /* Subtle caution feel */
+}
+
+.main-feed--caution .main-feed__context {
+    border-top-color: var(--bb-yellow);
+    background-color: rgba(var(--bb-yellow-rgb, 255, 200, 0), 0.05);
+}
+
+.main-feed--caution .main-feed__video::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--bb-yellow), transparent, var(--bb-yellow));
+    animation: caution-flash 2s ease-in-out infinite;
+}
+
+@keyframes caution-flash {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}
+
+/* FINAL LAPS - Intense, race climax */
+.main-feed--final_laps {
+    /* Urgent feel */
+}
+
+.main-feed--final_laps .main-feed__context {
+    border-top-color: var(--bb-orange);
+}
+
+.main-feed--final_laps .main-feed__video::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--bb-orange);
+    animation: final-pulse 1s ease-in-out infinite;
+}
+
+@keyframes final-pulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, var(--bb-dark-gray) 0%, var(--bb-black) 50%, var(--bb-mid-gray) 100%);
+}
+
+.video-driver-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--bb-space-sm);
+}
+
+.video-car-num {
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-3xl);
+    font-weight: 700;
+    color: var(--bb-text-muted);
+}
+
+.video-driver-name {
+    font-size: var(--bb-text-xl);
+    font-weight: 600;
+    color: var(--bb-text-secondary);
+}
+
+.video-mode-label {
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-xl);
+    font-weight: 600;
+    color: var(--bb-text-muted);
+    letter-spacing: 0.1em;
+}
+
+/* Camera Lock Badge */
+.camera-lock-badge {
+    position: absolute;
+    top: var(--bb-space-md);
+    right: var(--bb-space-md);
+    padding: var(--bb-space-xs) var(--bb-space-sm);
+    background-color: var(--bb-orange-dim);
+    border: 1px solid var(--bb-orange);
+    border-radius: var(--bb-radius-sm);
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-xs);
+    font-weight: 600;
+    color: var(--bb-orange);
+}
+
+/* AI Suggestion Overlay */
+.ai-suggestion-overlay {
+    position: absolute;
+    top: var(--bb-space-md);
+    left: var(--bb-space-md);
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-sm);
+    padding: var(--bb-space-sm) var(--bb-space-md);
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--bb-blue);
+    border-radius: var(--bb-radius-md);
+    animation: fade-in var(--bb-transition-normal);
+}
+
+.ai-suggestion-label {
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-xs);
+    font-weight: 600;
+    color: var(--bb-blue);
+    text-transform: uppercase;
+}
+
+.ai-suggestion-reason {
+    font-size: var(--bb-text-sm);
+    color: var(--bb-text-secondary);
+}
+
+.ai-suggestion-confidence {
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-sm);
+    font-weight: 700;
+    color: var(--bb-blue);
+}
+
+/* Bottom Overlay Strip */
+.main-feed__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    padding: var(--bb-space-xl) var(--bb-space-md) var(--bb-space-md);
+}
+
+/* Driver Card */
+.overlay-driver-card {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-md);
+    padding: var(--bb-space-sm) var(--bb-space-md);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-left: 3px solid var(--bb-orange);
+    border-radius: var(--bb-radius-sm);
+    margin-bottom: var(--bb-space-sm);
+}
+
+.overlay-position {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background-color: var(--bb-orange);
+    color: var(--bb-black);
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-lg);
+    font-weight: 700;
+    border-radius: var(--bb-radius-sm);
+}
+
+.overlay-name {
+    font-weight: 600;
+    font-size: var(--bb-text-lg);
+    color: var(--bb-text-primary);
+}
+
+.overlay-gap {
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-base);
+    color: var(--bb-text-secondary);
+    margin-left: auto;
+}
+
+/* Status Banner */
+.overlay-status {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-md);
+    padding: var(--bb-space-xs) var(--bb-space-md);
+    border-radius: var(--bb-radius-sm);
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-sm);
+}
+
+.overlay-status--caution {
+    background-color: var(--bb-yellow);
+    color: var(--bb-black);
+}
+
+.overlay-status--race_green {
+    background-color: var(--bb-green);
+    color: var(--bb-black);
+}
+
+.overlay-status--final_laps {
+    background-color: var(--bb-orange);
+    color: var(--bb-black);
+}
+
+.status-label {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-indicator {
+    font-size: var(--bb-text-xs);
+    letter-spacing: 0.1em;
+}
+
+.status-detail {
+    font-weight: 500;
+}

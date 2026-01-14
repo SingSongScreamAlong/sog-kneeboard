@@ -1,0 +1,325 @@
+/* =====================================================================
+   TopBar Styles
+   ===================================================================== */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--bb-space-md);
+    background-color: var(--bb-black);
+    height: var(--bb-topbar-height);
+}
+
+/* Logo Section */
+.topbar__logo {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-sm);
+}
+
+.logo-stripes {
+    display: flex;
+    gap: 2px;
+    transform: skewX(-12deg);
+}
+
+.stripe {
+    width: 6px;
+    height: 20px;
+    border-radius: 2px;
+}
+
+.stripe--black {
+    background-color: var(--bb-brand-black);
+    border: 1px solid var(--bb-border-gray);
+}
+
+.stripe--blue {
+    background-color: var(--bb-brand-blue);
+}
+
+.stripe--orange {
+    background-color: var(--bb-brand-orange);
+}
+
+.logo-text {
+    font-family: var(--bb-font-display);
+    font-weight: 700;
+    font-size: var(--bb-text-lg);
+    letter-spacing: 0.02em;
+    color: var(--bb-text-primary);
+    margin-left: var(--bb-space-sm);
+}
+
+.logo-divider {
+    color: var(--bb-text-muted);
+    margin: 0 var(--bb-space-xs);
+}
+
+.logo-product {
+    font-family: var(--bb-font-display);
+    font-weight: 500;
+    font-size: var(--bb-text-base);
+    color: var(--bb-text-secondary);
+}
+
+/* Center State Banner */
+.topbar__center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.state-banner {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-sm);
+    padding: var(--bb-space-xs) var(--bb-space-xl);
+    border-radius: var(--bb-radius-md);
+    font-family: var(--bb-font-mono);
+    font-weight: 600;
+    font-size: var(--bb-text-base);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.state-banner--race_green,
+.state-banner--practice {
+    background-color: var(--bb-green-dim);
+    color: var(--bb-green);
+    border: 1px solid var(--bb-green);
+}
+
+.state-banner--caution,
+.state-banner--restart {
+    background-color: var(--bb-yellow-dim);
+    color: var(--bb-yellow);
+    border: 1px solid var(--bb-yellow);
+}
+
+.state-banner--qualifying {
+    background-color: var(--bb-blue-dim);
+    color: var(--bb-blue);
+    border: 1px solid var(--bb-blue);
+}
+
+.state-banner--final_laps,
+.state-banner--finish {
+    background-color: var(--bb-orange-dim);
+    color: var(--bb-orange);
+    border: 1px solid var(--bb-orange);
+}
+
+.state-banner--idle {
+    background-color: var(--bb-light-gray);
+    color: var(--bb-text-muted);
+    border: 1px solid var(--bb-border-gray);
+}
+
+.state-banner__icon {
+    font-size: var(--bb-text-sm);
+}
+
+.state-banner__time {
+    font-family: var(--bb-font-mono);
+    margin-left: var(--bb-space-sm);
+}
+
+/* Right Section */
+.topbar__right {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-md);
+}
+
+.session-badge {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-xs);
+    padding: var(--bb-space-xs) var(--bb-space-sm);
+    background-color: var(--bb-mid-gray);
+    border: 1px solid var(--bb-border-gray);
+    border-radius: var(--bb-radius-sm);
+}
+
+.session-badge__id {
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-xs);
+    color: var(--bb-text-secondary);
+}
+
+.connection-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--bb-red);
+}
+
+.connection-dot--connected {
+    background-color: var(--bb-green);
+}
+
+.topbar__adv-btn {
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.topbar__adv-btn .adv-icon {
+    transition: transform var(--bb-transition-fast);
+}
+
+.topbar__adv-btn.btn--active .adv-icon {
+    transform: rotate(90deg);
+}
+
+/* =====================================================================
+   UX Clarity - Session Progress
+   ===================================================================== */
+
+.session-progress {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-xs);
+    margin-left: var(--bb-space-lg);
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-sm);
+    color: var(--bb-text-secondary);
+}
+
+.progress-label {
+    font-size: var(--bb-text-xs);
+    color: var(--bb-text-muted);
+}
+
+.progress-current {
+    font-weight: 700;
+    color: var(--bb-text-primary);
+}
+
+.progress-sep {
+    color: var(--bb-text-muted);
+}
+
+.progress-bar {
+    width: 60px;
+    height: 4px;
+    background-color: var(--bb-border-gray);
+    border-radius: 2px;
+    margin-left: var(--bb-space-sm);
+    overflow: hidden;
+}
+
+.progress-bar__fill {
+    height: 100%;
+    background-color: var(--bb-orange);
+    border-radius: 2px;
+    transition: width var(--bb-transition-normal);
+}
+
+/* =====================================================================
+   UX Clarity - Focus Indicator (WHO we're watching and WHY)
+   ===================================================================== */
+
+.focus-indicator {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-sm);
+    padding: var(--bb-space-xs) var(--bb-space-md);
+    background-color: var(--bb-orange-dim);
+    border: 1px solid var(--bb-orange);
+    border-radius: var(--bb-radius-md);
+    margin-left: var(--bb-space-lg);
+}
+
+.focus-indicator__label {
+    font-family: var(--bb-font-mono);
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--bb-orange);
+    letter-spacing: 0.1em;
+}
+
+.focus-indicator__driver {
+    font-weight: 600;
+    font-size: var(--bb-text-sm);
+    color: var(--bb-text-primary);
+}
+
+.focus-indicator__reason {
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-xs);
+    color: var(--bb-text-secondary);
+    padding-left: var(--bb-space-sm);
+    border-left: 1px solid var(--bb-orange);
+}
+
+/* =====================================================================
+   UX Clarity - LIVE/OFFLINE Badge
+   ===================================================================== */
+
+.live-badge {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-xs);
+    padding: var(--bb-space-xs) var(--bb-space-sm);
+    border-radius: var(--bb-radius-sm);
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-xs);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.live-badge--live {
+    background-color: var(--bb-red-dim);
+    color: var(--bb-red);
+    border: 1px solid var(--bb-red);
+}
+
+.live-badge--live .live-badge__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--bb-red);
+    animation: pulse-live 1.5s infinite;
+}
+
+.live-badge--offline {
+    background-color: var(--bb-light-gray);
+    color: var(--bb-text-muted);
+    border: 1px solid var(--bb-border-gray);
+}
+
+.live-badge--offline .live-badge__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--bb-text-muted);
+}
+
+/* =====================================================================
+   UX Clarity - Reset to Auto Button
+   ===================================================================== */
+
+.btn--reset {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-xs);
+    padding: var(--bb-space-xs) var(--bb-space-sm);
+    background-color: var(--bb-blue-dim);
+    border: 1px solid var(--bb-blue);
+    border-radius: var(--bb-radius-sm);
+    color: var(--bb-blue);
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-xs);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--bb-transition-fast);
+}
+
+.btn--reset:hover {
+    background-color: var(--bb-blue);
+    color: var(--bb-text-primary);
+}

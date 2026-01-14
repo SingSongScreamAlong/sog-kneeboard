@@ -1,0 +1,122 @@
+/* =====================================================================
+   Scene Switcher Styles
+   ===================================================================== */
+
+.scene-switcher {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bb-dark-gray);
+    border-radius: var(--bb-radius-md);
+    overflow: hidden;
+}
+
+.scene-switcher__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--bb-space-sm) var(--bb-space-md);
+    background-color: var(--bb-mid-gray);
+    border-bottom: 1px solid var(--bb-border-gray);
+}
+
+.scene-switcher__title {
+    font-size: var(--bb-text-xs);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--bb-text-secondary);
+}
+
+.scene-switcher__hint {
+    font-size: var(--bb-text-xs);
+    color: var(--bb-text-muted);
+    font-style: italic;
+}
+
+.scene-switcher__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--bb-space-xs);
+    padding: var(--bb-space-sm);
+}
+
+.scene-switcher__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--bb-space-xs);
+    padding: var(--bb-space-md);
+    background-color: var(--bb-mid-gray);
+    border: 2px solid transparent;
+    border-radius: var(--bb-radius-sm);
+    cursor: pointer;
+    transition: all var(--bb-transition-fast);
+    min-height: 80px;
+}
+
+.scene-switcher__btn:hover:not(:disabled) {
+    background-color: var(--bb-light-gray);
+    border-color: var(--bb-blue);
+}
+
+.scene-switcher__btn--active {
+    border-color: var(--bb-red);
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.scene-switcher__btn--transitioning {
+    opacity: 0.6;
+}
+
+.scene-switcher__btn:disabled {
+    cursor: default;
+}
+
+.scene-switcher__btn-icon {
+    font-size: 24px;
+}
+
+.scene-switcher__btn-name {
+    font-size: var(--bb-text-sm);
+    font-weight: 600;
+    color: var(--bb-text-primary);
+}
+
+.scene-switcher__btn-transition {
+    font-size: var(--bb-text-xs);
+    font-family: var(--bb-font-mono);
+    color: var(--bb-text-muted);
+}
+
+.scene-switcher__quick-actions {
+    display: flex;
+    gap: var(--bb-space-xs);
+    padding: var(--bb-space-sm);
+    border-top: 1px solid var(--bb-border-gray);
+}
+
+.scene-switcher__quick-btn {
+    flex: 1;
+    padding: var(--bb-space-sm) var(--bb-space-md);
+    background-color: var(--bb-mid-gray);
+    border: 1px solid var(--bb-border-gray);
+    border-radius: var(--bb-radius-sm);
+    color: var(--bb-text-primary);
+    font-size: var(--bb-text-sm);
+    cursor: pointer;
+    transition: all var(--bb-transition-fast);
+}
+
+.scene-switcher__quick-btn:hover {
+    background-color: var(--bb-light-gray);
+}
+
+.scene-switcher__quick-btn--cut {
+    background-color: var(--bb-red);
+    border-color: var(--bb-red);
+    color: white;
+}
+
+.scene-switcher__quick-btn--cut:hover {
+    background-color: #cc0000;
+}

@@ -1,0 +1,138 @@
+/* =====================================================================
+   RaceContextPanel Styles
+   ===================================================================== */
+
+.race-context {
+    display: flex;
+    flex-direction: column;
+    gap: var(--bb-space-sm);
+    padding: var(--bb-space-sm);
+    background-color: var(--bb-mid-gray);
+    border-bottom: 1px solid var(--bb-border-gray);
+}
+
+/* Header with Lap Display */
+.race-context__header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.lap-display {
+    display: flex;
+    align-items: baseline;
+    gap: var(--bb-space-sm);
+    font-family: var(--bb-font-mono);
+}
+
+.lap-label {
+    font-size: var(--bb-text-sm);
+    color: var(--bb-text-muted);
+}
+
+.lap-current {
+    font-size: var(--bb-text-2xl);
+    font-weight: 700;
+    color: var(--bb-text-primary);
+}
+
+.lap-time {
+    font-size: var(--bb-text-xl);
+    color: var(--bb-text-secondary);
+}
+
+/* Flag Banner */
+.flag-banner {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-sm);
+    padding: var(--bb-space-xs) var(--bb-space-md);
+    border-radius: var(--bb-radius-sm);
+    font-family: var(--bb-font-mono);
+    font-weight: 600;
+    font-size: var(--bb-text-sm);
+}
+
+.flag-banner--green {
+    background-color: var(--bb-green-dim);
+    color: var(--bb-green);
+    border-left: 3px solid var(--bb-green);
+}
+
+.flag-banner--yellow,
+.flag-banner--caution {
+    background-color: var(--bb-yellow-dim);
+    color: var(--bb-yellow);
+    border-left: 3px solid var(--bb-yellow);
+}
+
+.flag-banner--red {
+    background-color: var(--bb-red-dim);
+    color: var(--bb-red);
+    border-left: 3px solid var(--bb-red);
+}
+
+.flag-banner--checkered {
+    background-color: var(--bb-light-gray);
+    color: var(--bb-text-primary);
+    border-left: 3px solid var(--bb-text-primary);
+}
+
+.flag-indicator-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: currentColor;
+}
+
+/* Track Info */
+.track-info {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--bb-space-sm);
+    padding: var(--bb-space-xs) 0;
+}
+
+.track-indicator {
+    color: var(--bb-orange);
+    font-size: var(--bb-text-sm);
+}
+
+.track-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.track-name {
+    font-weight: 600;
+    font-size: var(--bb-text-base);
+    color: var(--bb-text-primary);
+}
+
+.track-config {
+    font-size: var(--bb-text-xs);
+    color: var(--bb-text-muted);
+}
+
+/* Lap Progress */
+.lap-progress {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-sm);
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-sm);
+    color: var(--bb-text-secondary);
+}
+
+.progress-icon {
+    color: var(--bb-text-muted);
+}
+
+.progress-current {
+    font-weight: 600;
+    color: var(--bb-text-primary);
+}
+
+.progress-separator {
+    font-size: var(--bb-text-xs);
+    color: var(--bb-text-muted);
+}

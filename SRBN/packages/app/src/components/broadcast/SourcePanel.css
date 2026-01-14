@@ -1,0 +1,190 @@
+/* =====================================================================
+   Source Panel Styles
+   ===================================================================== */
+
+.source-panel {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bb-dark-gray);
+    border-radius: var(--bb-radius-md);
+    overflow: hidden;
+}
+
+.source-panel__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--bb-space-sm) var(--bb-space-md);
+    background-color: var(--bb-mid-gray);
+    border-bottom: 1px solid var(--bb-border-gray);
+}
+
+.source-panel__title {
+    font-size: var(--bb-text-xs);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--bb-text-secondary);
+}
+
+.source-panel__count {
+    font-size: var(--bb-text-xs);
+    color: var(--bb-text-muted);
+}
+
+.source-panel__actions {
+    display: flex;
+    gap: var(--bb-space-sm);
+    padding: var(--bb-space-sm) var(--bb-space-md);
+    border-bottom: 1px solid var(--bb-border-gray);
+}
+
+.source-panel__add-btn {
+    flex: 1;
+    padding: var(--bb-space-sm) var(--bb-space-md);
+    background-color: var(--bb-mid-gray);
+    border: 1px solid var(--bb-border-gray);
+    border-radius: var(--bb-radius-sm);
+    color: var(--bb-text-primary);
+    font-size: var(--bb-text-xs);
+    cursor: pointer;
+    transition: all var(--bb-transition-fast);
+}
+
+.source-panel__add-btn:hover {
+    background-color: var(--bb-light-gray);
+    border-color: var(--bb-blue);
+}
+
+.source-panel__list {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--bb-space-sm);
+}
+
+.source-panel__empty {
+    padding: var(--bb-space-lg);
+    text-align: center;
+    color: var(--bb-text-muted);
+    font-size: var(--bb-text-sm);
+}
+
+.source-panel__item {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-sm);
+    padding: var(--bb-space-sm);
+    background-color: var(--bb-mid-gray);
+    border-radius: var(--bb-radius-sm);
+    margin-bottom: var(--bb-space-xs);
+    border: 1px solid transparent;
+    transition: all var(--bb-transition-fast);
+}
+
+.source-panel__item:hover {
+    border-color: var(--bb-border-gray);
+}
+
+.source-panel__item--connected {
+    border-left: 3px solid var(--bb-green);
+}
+
+.source-panel__item--disconnected {
+    border-left: 3px solid var(--bb-text-muted);
+    opacity: 0.6;
+}
+
+.source-panel__item--error {
+    border-left: 3px solid var(--bb-red);
+}
+
+.source-panel__item-preview {
+    width: 80px;
+    height: 45px;
+    background-color: #000;
+    border-radius: var(--bb-radius-sm);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.source-panel__item-preview video,
+.source-panel__item-preview canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.source-panel__item-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: var(--bb-dark-gray);
+}
+
+.source-panel__item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.source-panel__item-name {
+    display: block;
+    font-size: var(--bb-text-sm);
+    font-weight: 600;
+    color: var(--bb-text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.source-panel__item-meta {
+    display: block;
+    font-size: var(--bb-text-xs);
+    color: var(--bb-text-muted);
+    font-family: var(--bb-font-mono);
+}
+
+.source-panel__item-status {
+    padding: 0 var(--bb-space-sm);
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--bb-text-muted);
+}
+
+.status-dot--connected {
+    background-color: var(--bb-green);
+    box-shadow: 0 0 6px var(--bb-green);
+}
+
+.status-dot--connecting {
+    background-color: var(--bb-orange);
+    animation: pulse-live 1s ease-in-out infinite;
+}
+
+.status-dot--error {
+    background-color: var(--bb-red);
+}
+
+.source-panel__item-remove {
+    padding: var(--bb-space-xs);
+    background: none;
+    border: none;
+    color: var(--bb-text-muted);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity var(--bb-transition-fast);
+}
+
+.source-panel__item:hover .source-panel__item-remove {
+    opacity: 1;
+}
+
+.source-panel__item-remove:hover {
+    color: var(--bb-red);
+}

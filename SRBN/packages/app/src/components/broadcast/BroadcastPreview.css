@@ -1,0 +1,89 @@
+/* =====================================================================
+   Broadcast Preview Styles
+   ===================================================================== */
+
+.broadcast-preview {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bb-dark-gray);
+    border-radius: var(--bb-radius-md);
+    overflow: hidden;
+}
+
+.broadcast-preview__header {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-md);
+    padding: var(--bb-space-sm) var(--bb-space-md);
+    background-color: var(--bb-mid-gray);
+    border-bottom: 1px solid var(--bb-border-gray);
+}
+
+.broadcast-preview__label {
+    font-size: var(--bb-text-xs);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--bb-red);
+    background-color: rgba(255, 0, 0, 0.1);
+    padding: 2px 8px;
+    border-radius: var(--bb-radius-sm);
+}
+
+.broadcast-preview__scene {
+    flex: 1;
+    font-size: var(--bb-text-sm);
+    font-weight: 600;
+    color: var(--bb-text-primary);
+}
+
+.broadcast-preview__status {
+    font-size: var(--bb-text-xs);
+    font-family: var(--bb-font-mono);
+    color: var(--bb-text-muted);
+}
+
+.broadcast-preview__status--live {
+    color: var(--bb-red);
+    animation: pulse-live 2s ease-in-out infinite;
+}
+
+.broadcast-preview__canvas-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #000000;
+}
+
+.broadcast-preview__canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.broadcast-preview__disabled {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bb-dark-gray);
+    color: var(--bb-text-muted);
+    font-size: var(--bb-text-lg);
+}
+
+.broadcast-preview__controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--bb-space-md);
+    padding: var(--bb-space-xs) var(--bb-space-md);
+    background-color: var(--bb-mid-gray);
+    border-top: 1px solid var(--bb-border-gray);
+}
+
+.broadcast-preview__resolution,
+.broadcast-preview__fps {
+    font-size: var(--bb-text-xs);
+    font-family: var(--bb-font-mono);
+    color: var(--bb-text-muted);
+}
