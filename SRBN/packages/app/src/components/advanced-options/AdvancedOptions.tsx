@@ -6,9 +6,9 @@
 import { useBroadcastStore } from '../../stores/broadcast.store';
 import { SceneSwitcher } from '../broadcast/SceneSwitcher';
 import { SourcePanel } from '../broadcast/SourcePanel';
-import { RecordingControls } from '../broadcast/RecordingControls';
-import { StreamingControls } from '../broadcast/StreamingControls';
 import { AudioMixer } from '../broadcast/AudioMixer';
+import { ReplayControls } from '../broadcast/ReplayControls';
+import { OutputPanel } from '../broadcast/OutputPanel';
 import './AdvancedOptions.css';
 
 export function AdvancedOptions() {
@@ -122,12 +122,7 @@ export function AdvancedOptions() {
             {/* Replay Section */}
             <section className="adv-section">
                 <h3 className="adv-section__title">Replay</h3>
-
-                <div className="adv-control">
-                    <button className="btn btn--primary adv-full-btn">
-                        ⏮ Replay Last Event
-                    </button>
-                </div>
+                <ReplayControls />
             </section>
 
             {/* Broadcast Engine Controls */}
@@ -147,15 +142,8 @@ export function AdvancedOptions() {
 
             {/* Output Section */}
             <section className="adv-section">
-                <h3 className="adv-section__title">Output & Recording</h3>
-
-                <div className="adv-control-group">
-                    <RecordingControls />
-                </div>
-
-                <div className="adv-control-group" style={{ marginTop: '16px' }}>
-                    <StreamingControls />
-                </div>
+                <h3 className="adv-section__title">OBS Output</h3>
+                <OutputPanel />
             </section>
         </div>
     );

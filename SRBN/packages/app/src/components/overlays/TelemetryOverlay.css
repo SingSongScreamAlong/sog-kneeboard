@@ -1,0 +1,234 @@
+/* =====================================================================
+   TelemetryOverlay Styles
+   ===================================================================== */
+
+.telemetry-overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: var(--bb-space-sm);
+    padding: var(--bb-space-md);
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(20, 20, 20, 0.9) 100%);
+    border-radius: var(--bb-radius-md);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    z-index: 50;
+    min-width: 200px;
+}
+
+.telemetry-overlay--bottom-left {
+    bottom: var(--bb-space-lg);
+    left: var(--bb-space-lg);
+}
+
+.telemetry-overlay--bottom-right {
+    bottom: var(--bb-space-lg);
+    right: var(--bb-space-lg);
+}
+
+.telemetry-overlay--top-left {
+    top: var(--bb-space-lg);
+    left: var(--bb-space-lg);
+}
+
+.telemetry-overlay--top-right {
+    top: var(--bb-space-lg);
+    right: var(--bb-space-lg);
+}
+
+/* Driver Badge */
+.telemetry-driver {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-sm);
+    padding-bottom: var(--bb-space-sm);
+    border-bottom: 1px solid var(--bb-border-gray);
+}
+
+.telemetry-position {
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-sm);
+    font-weight: 700;
+    color: var(--bb-orange);
+    background-color: var(--bb-orange-dim);
+    padding: 2px 6px;
+    border-radius: var(--bb-radius-sm);
+}
+
+.telemetry-name {
+    font-weight: 600;
+    font-size: var(--bb-text-base);
+    color: var(--bb-text-primary);
+}
+
+/* Speed Display */
+.telemetry-speed {
+    display: flex;
+    align-items: baseline;
+    gap: var(--bb-space-xs);
+}
+
+.speed-value {
+    font-family: var(--bb-font-mono);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--bb-text-primary);
+    line-height: 1;
+}
+
+.speed-unit {
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-xs);
+    color: var(--bb-text-muted);
+}
+
+.gear-indicator {
+    margin-left: auto;
+    font-family: var(--bb-font-mono);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--bb-green);
+}
+
+/* Throttle/Brake Traces */
+.telemetry-traces {
+    display: flex;
+    flex-direction: column;
+    gap: var(--bb-space-xs);
+}
+
+.trace-container {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-sm);
+}
+
+.trace-label {
+    font-family: var(--bb-font-mono);
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--bb-text-muted);
+    width: 28px;
+}
+
+.trace-bar {
+    flex: 1;
+    height: 8px;
+    background-color: var(--bb-border-gray);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.trace-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.05s linear;
+}
+
+.trace-fill--throttle {
+    background: linear-gradient(90deg, var(--bb-green), #00ff88);
+}
+
+.trace-fill--brake {
+    background: linear-gradient(90deg, var(--bb-red), #ff4444);
+}
+
+.trace-value {
+    font-family: var(--bb-font-mono);
+    font-size: 10px;
+    color: var(--bb-text-secondary);
+    width: 30px;
+    text-align: right;
+}
+
+/* Tire Visualization */
+.telemetry-tires {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-sm);
+    padding-top: var(--bb-space-sm);
+    border-top: 1px solid var(--bb-border-gray);
+}
+
+.tire-label {
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-xs);
+    font-weight: 700;
+    color: var(--bb-yellow);
+    background-color: var(--bb-yellow-dim);
+    padding: 2px 4px;
+    border-radius: 2px;
+}
+
+.tire-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+}
+
+.tire-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.tire-box {
+    width: 16px;
+    height: 24px;
+    background-color: var(--bb-dark-gray);
+    border: 2px solid var(--tire-color, var(--bb-green));
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tire-wear {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bb-red);
+    opacity: 0.6;
+}
+
+.tire-temp {
+    font-family: var(--bb-font-mono);
+    font-size: 8px;
+    color: var(--tire-color, var(--bb-green));
+}
+
+.tire-age {
+    font-family: var(--bb-font-mono);
+    font-size: 10px;
+    color: var(--bb-text-muted);
+    margin-left: auto;
+}
+
+/* Delta Time */
+.telemetry-delta {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-sm);
+}
+
+.delta-label {
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-xs);
+    color: var(--bb-text-muted);
+}
+
+.delta-value {
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-lg);
+    font-weight: 700;
+}
+
+.delta-value--behind {
+    color: var(--bb-red);
+}
+
+.delta-value--ahead {
+    color: var(--bb-green);
+}

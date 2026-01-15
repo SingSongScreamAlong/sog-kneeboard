@@ -1,0 +1,188 @@
+/* =====================================================================
+   OutputPanel Styles
+   ===================================================================== */
+
+.output-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background-color: var(--bb-border-gray);
+}
+
+.output-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--bb-space-sm) var(--bb-space-md);
+    background-color: var(--bb-mid-gray);
+}
+
+.output-title {
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-xs);
+    font-weight: 600;
+    color: var(--bb-text-secondary);
+    letter-spacing: 0.05em;
+}
+
+.output-status {
+    font-family: var(--bb-font-mono);
+    font-size: 9px;
+    font-weight: 600;
+    color: var(--bb-text-muted);
+    padding: 2px 6px;
+    border-radius: var(--bb-radius-sm);
+    background-color: var(--bb-dark-gray);
+}
+
+.output-status--connected {
+    color: var(--bb-green);
+    background-color: var(--bb-green-dim);
+}
+
+.output-connection {
+    display: flex;
+    gap: var(--bb-space-xs);
+    padding: var(--bb-space-sm) var(--bb-space-md);
+    background-color: var(--bb-dark-gray);
+}
+
+.obs-url-input {
+    flex: 1;
+    padding: var(--bb-space-xs) var(--bb-space-sm);
+    background-color: var(--bb-black);
+    border: 1px solid var(--bb-border-gray);
+    border-radius: var(--bb-radius-sm);
+    color: var(--bb-text-primary);
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-xs);
+}
+
+.obs-url-input:focus {
+    outline: none;
+    border-color: var(--bb-orange);
+}
+
+.output-error {
+    padding: var(--bb-space-sm) var(--bb-space-md);
+    background-color: var(--bb-red-dim);
+    color: var(--bb-red);
+    font-size: var(--bb-text-xs);
+}
+
+.output-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--bb-space-xs);
+    padding: var(--bb-space-sm) var(--bb-space-md);
+    background-color: var(--bb-dark-gray);
+}
+
+.control-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--bb-space-xs);
+    padding: var(--bb-space-md);
+    background-color: var(--bb-mid-gray);
+    border: 1px solid var(--bb-border-gray);
+    border-radius: var(--bb-radius-md);
+    cursor: pointer;
+    transition: all var(--bb-transition-fast);
+}
+
+.control-btn:hover {
+    background-color: var(--bb-light-gray);
+}
+
+.control-btn--active {
+    border-width: 2px;
+}
+
+.control-btn--streaming {
+    background-color: var(--bb-red-dim);
+    border-color: var(--bb-red);
+}
+
+.control-btn--recording {
+    background-color: var(--bb-orange-dim);
+    border-color: var(--bb-orange);
+}
+
+.control-icon {
+    font-size: 20px;
+}
+
+.control-label {
+    font-size: var(--bb-text-xs);
+    font-weight: 500;
+    color: var(--bb-text-primary);
+}
+
+.output-scenes {
+    padding: var(--bb-space-sm) var(--bb-space-md);
+    background-color: var(--bb-dark-gray);
+}
+
+.scenes-label {
+    font-size: var(--bb-text-xs);
+    color: var(--bb-text-muted);
+    margin-bottom: var(--bb-space-xs);
+}
+
+.scenes-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--bb-space-xs);
+}
+
+.scene-btn {
+    padding: var(--bb-space-xs) var(--bb-space-sm);
+    background-color: var(--bb-mid-gray);
+    border: 1px solid var(--bb-border-gray);
+    border-radius: var(--bb-radius-sm);
+    color: var(--bb-text-secondary);
+    font-size: var(--bb-text-xs);
+    cursor: pointer;
+    transition: all var(--bb-transition-fast);
+}
+
+.scene-btn:hover {
+    background-color: var(--bb-light-gray);
+}
+
+.scene-btn--active {
+    background-color: var(--bb-green-dim);
+    border-color: var(--bb-green);
+    color: var(--bb-green);
+}
+
+.output-stats {
+    display: flex;
+    gap: var(--bb-space-md);
+    padding: var(--bb-space-sm) var(--bb-space-md);
+    background-color: var(--bb-mid-gray);
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-xs);
+}
+
+.stat-label {
+    font-size: var(--bb-text-xs);
+    color: var(--bb-text-muted);
+}
+
+.stat-value {
+    font-family: var(--bb-font-mono);
+    font-size: var(--bb-text-xs);
+    font-weight: 600;
+    color: var(--bb-text-primary);
+}
+
+.stat-value--warning {
+    color: var(--bb-orange);
+}

@@ -95,6 +95,11 @@ class TelemetryClient {
         // Driver updates (full list)
         socket.on('drivers:update', (drivers: Driver[]) => {
             useDriverStore.getState().setDrivers(drivers);
+
+            // Run battle detection on updated driver data
+            import('../services/BattleDetector').then(({ battleDetector }) => {
+                battleDetector.analyze(drivers);
+            });
         });
 
         // New race events

@@ -11,3 +11,5 @@ export { StreamingControls } from './StreamingControls';
 export { AudioMixer } from './AudioMixer';
 export { RadioComms, useRadioComms } from './RadioComms';
 export { YouTubeEmbed } from './YouTubeEmbed';
+export { ReplayControls } from './ReplayControls';
+export { OutputPanel } from './OutputPanel';
