@@ -8,14 +8,17 @@ import { BroadcastPreview } from '../broadcast/BroadcastPreview';
 import { RadioComms, useRadioComms } from '../broadcast/RadioComms';
 import { RaceContextPanel } from '../context-stack/RaceContextPanel';
 import { EventQueue } from '../context-stack/EventQueue';
+import { TelemetryOverlay } from '../overlays/TelemetryOverlay';
 import { useDriverStore } from '../../stores/driver.store';
 import { useSessionStore } from '../../stores/session.store';
+import { useBroadcastStore } from '../../stores/broadcast.store';
 import './MainFeed.css';
 
 export function MainFeed() {
     const { messages, addMessage } = useRadioComms();
     const { drivers } = useDriverStore();
     const { sessionState } = useSessionStore();
+    const { featuredDriverId, overlayVerbosity } = useBroadcastStore();
 
     // Simulate occasional radio messages for demo
     useEffect(() => {
@@ -44,6 +47,9 @@ export function MainFeed() {
         return () => clearInterval(interval);
     }, [drivers, addMessage]);
 
+    // Show telemetry overlay when a driver is featured and not minimal verbosity
+    const showTelemetry = featuredDriverId && overlayVerbosity !== 'minimal';
+
     return (
         <main className={`main-feed panel panel--center main-feed--${sessionState.toLowerCase()}`}>
             {/* Broadcast Preview (main video area) */}
@@ -52,6 +58,18 @@ export function MainFeed() {
 
                 {/* F1-style Radio Captions Overlay */}
                 <RadioComms messages={messages} />
+
+                {/* Telemetry Overlay (when driver is focused) */}
+                {showTelemetry && (
+                    <TelemetryOverlay
+                        driverId={featuredDriverId}
+                        showSpeed={true}
+                        showThrottleBrake={overlayVerbosity === 'detailed'}
+                        showTires={overlayVerbosity === 'detailed'}
+                        showDelta={true}
+                        position="bottom-right"
+                    />
+                )}
             </div>
 
             {/* Context info below the video */}
