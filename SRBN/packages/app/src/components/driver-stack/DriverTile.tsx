@@ -7,6 +7,18 @@ import type { Driver, TireCompound } from '@broadcastbox/common';
 import { useBroadcastStore } from '../../stores/broadcast.store';
 import './DriverTile.css';
 
+type DriverTier = 'R' | 'D' | 'C' | 'B' | 'A' | 'PRO';
+
+function getDriverTier(irating?: number): DriverTier | null {
+    if (irating === undefined || irating === null) return null;
+    if (irating >= 4500) return 'PRO';
+    if (irating >= 3500) return 'A';
+    if (irating >= 2500) return 'B';
+    if (irating >= 1750) return 'C';
+    if (irating >= 1000) return 'D';
+    return 'R';
+}
+
 interface DriverTileProps {
     driver: Driver;
     index: number;
@@ -16,6 +28,7 @@ interface DriverTileProps {
 export function DriverTile({ driver, index, isAISuggested }: DriverTileProps) {
     const { featuredDriverId, setFeaturedDriver } = useBroadcastStore();
     const isSelected = featuredDriverId === driver.id;
+    const tier = getDriverTier(driver.irating);
 
     const handleClick = () => {
         setFeaturedDriver(isSelected ? null : driver.id);
@@ -55,6 +68,7 @@ export function DriverTile({ driver, index, isAISuggested }: DriverTileProps) {
                 <div className="driver-tile__details">
                     <TireIcon compound={driver.tireCompound} laps={driver.tireLaps} />
                     <PitStatus status={driver.pitStatus} count={driver.pitCount} />
+                    {tier && <TierBadge tier={tier} irating={driver.irating} />}
                 </div>
             </div>
 
@@ -62,6 +76,14 @@ export function DriverTile({ driver, index, isAISuggested }: DriverTileProps) {
             <div className="driver-tile__shortcut">
                 {index + 1}
             </div>
+        </div>
+    );
+}
+
+function TierBadge({ tier, irating }: { tier: DriverTier; irating?: number }) {
+    return (
+        <div className={`driver-tier driver-tier--${tier.toLowerCase()}`} title={irating ? `iRating: ${irating}` : undefined}>
+            {tier}
         </div>
     );
 }

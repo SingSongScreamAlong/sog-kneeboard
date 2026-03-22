@@ -213,3 +213,24 @@
     border-color: var(--bb-orange);
     color: var(--bb-orange);
 }
+
+/* Driver Tier Badge */
+.driver-tier {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 5px;
+    font-family: var(--bb-font-mono);
+    font-size: 9px;
+    font-weight: 700;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+    margin-left: auto;
+}
+
+.driver-tier--r  { background-color: #555; color: #ccc; }
+.driver-tier--d  { background-color: #8b4513; color: #fff; }
+.driver-tier--c  { background-color: #1a6b1a; color: #fff; }
+.driver-tier--b  { background-color: #1a3a8b; color: #fff; }
+.driver-tier--a  { background-color: #8b1a1a; color: #fff; }
+.driver-tier--pro { background-color: var(--bb-yellow); color: var(--bb-black); }

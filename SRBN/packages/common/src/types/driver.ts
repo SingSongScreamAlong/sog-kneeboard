@@ -32,7 +32,13 @@ export interface Driver {
     lastLapTime: number | null; // milliseconds
     bestLapTime: number | null; // milliseconds
     irating?: number;
+    safetyRating?: number;
     teamName?: string;
+    speed?: number;            // km/h
+    throttle?: number;         // 0-100
+    brake?: number;            // 0-100
+    gear?: number;
+    rpm?: number;
 }
 
 /**

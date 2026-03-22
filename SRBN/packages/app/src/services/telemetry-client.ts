@@ -73,20 +73,28 @@ class TelemetryClient {
         // Timing updates
         socket.on('timing:update', (data: { sessionId: string; entries: any[]; timestamp: number }) => {
             const drivers: Driver[] = data.entries.map((entry) => ({
-                id: entry.driverId,
-                name: entry.driverName,
+                id: entry.id || entry.driverId,
+                name: entry.name || entry.driverName,
                 carNumber: entry.carNumber,
+                teamName: entry.teamName || '',
+                irating: entry.irating || 0,
+                safetyRating: entry.safetyRating || 0,
                 position: entry.position,
                 gapAhead: entry.gapAhead,
-                gapBehind: null, // Calculate from next driver
+                gapBehind: null,
                 gapToLeader: entry.gapToLeader,
                 tireCompound: entry.tireCompound || 'medium',
                 tireLaps: entry.tireLaps || 0,
-                pitStatus: entry.isInPit ? 'in_pit' : 'on_track',
+                pitStatus: entry.pitStatus || (entry.isInPit ? 'in_pit' : 'on_track'),
                 pitCount: entry.pitCount || 0,
                 isInBattle: Math.abs(entry.gapAhead || 999) < 1.0,
-                lastLapTime: null,
-                bestLapTime: null,
+                lastLapTime: entry.lastLapTime || null,
+                bestLapTime: entry.bestLapTime || null,
+                speed: entry.speed || 0,
+                throttle: entry.throttle != null ? entry.throttle * 100 : 0,
+                brake: entry.brake != null ? entry.brake * 100 : 0,
+                gear: entry.gear || 0,
+                rpm: entry.rpm || 0,
             }));
 
             useDriverStore.getState().setDrivers(drivers);

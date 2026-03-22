@@ -3,31 +3,9 @@
 // Real-time speed, throttle, brake traces and tire visualization
 // =====================================================================
 
-import { useMemo } from 'react';
 import { useDriverStore } from '../../stores/driver.store';
 import { useBroadcastStore } from '../../stores/broadcast.store';
 import './TelemetryOverlay.css';
-
-interface TelemetryData {
-    speed: number;
-    throttle: number;
-    brake: number;
-    gear: number;
-    rpm: number;
-    steeringAngle: number;
-}
-
-// Mock telemetry data generator for demo
-function generateMockTelemetry(): TelemetryData {
-    return {
-        speed: Math.floor(180 + Math.random() * 150),
-        throttle: Math.random() * 100,
-        brake: Math.random() > 0.7 ? Math.random() * 100 : 0,
-        gear: Math.floor(3 + Math.random() * 5),
-        rpm: Math.floor(8000 + Math.random() * 10000),
-        steeringAngle: (Math.random() - 0.5) * 90,
-    };
-}
 
 interface TelemetryOverlayProps {
     driverId?: string;
@@ -52,10 +30,12 @@ export function TelemetryOverlay({
     const targetDriverId = driverId || featuredDriverId;
     const driver = drivers.find(d => d.id === targetDriverId);
 
-    // For demo, generate mock telemetry
-    const telemetry = useMemo(() => generateMockTelemetry(), []);
-
     if (!driver) return null;
+
+    const speed = driver.speed ?? 0;
+    const throttle = driver.throttle ?? 0;
+    const brake = driver.brake ?? 0;
+    const gear = driver.gear ?? 0;
 
     return (
         <div className={`telemetry-overlay telemetry-overlay--${position}`}>
@@ -68,9 +48,9 @@ export function TelemetryOverlay({
             {/* Speed Display */}
             {showSpeed && (
                 <div className="telemetry-speed">
-                    <span className="speed-value">{telemetry.speed}</span>
+                    <span className="speed-value">{Math.round(speed)}</span>
                     <span className="speed-unit">KM/H</span>
-                    <span className="gear-indicator">G{telemetry.gear}</span>
+                    <span className="gear-indicator">G{gear}</span>
                 </div>
             )}
 
@@ -82,20 +62,20 @@ export function TelemetryOverlay({
                         <div className="trace-bar trace-bar--throttle">
                             <div
                                 className="trace-fill trace-fill--throttle"
-                                style={{ width: `${telemetry.throttle}%` }}
+                                style={{ width: `${throttle}%` }}
                             />
                         </div>
-                        <span className="trace-value">{Math.round(telemetry.throttle)}%</span>
+                        <span className="trace-value">{Math.round(throttle)}%</span>
                     </div>
                     <div className="trace-container">
                         <div className="trace-label">BRK</div>
                         <div className="trace-bar trace-bar--brake">
                             <div
                                 className="trace-fill trace-fill--brake"
-                                style={{ width: `${telemetry.brake}%` }}
+                                style={{ width: `${brake}%` }}
                             />
                         </div>
-                        <span className="trace-value">{Math.round(telemetry.brake)}%</span>
+                        <span className="trace-value">{Math.round(brake)}%</span>
                     </div>
                 </div>
             )}
@@ -105,10 +85,10 @@ export function TelemetryOverlay({
                 <div className="telemetry-tires">
                     <div className="tire-label">{driver.tireCompound?.toUpperCase() || 'MED'}</div>
                     <div className="tire-grid">
-                        <TireIndicator position="FL" temp={85} wear={0.15} />
-                        <TireIndicator position="FR" temp={88} wear={0.18} />
-                        <TireIndicator position="RL" temp={82} wear={0.12} />
-                        <TireIndicator position="RR" temp={84} wear={0.14} />
+                        <TireIndicator position="FL" tireLaps={driver.tireLaps} />
+                        <TireIndicator position="FR" tireLaps={driver.tireLaps} />
+                        <TireIndicator position="RL" tireLaps={driver.tireLaps} />
+                        <TireIndicator position="RR" tireLaps={driver.tireLaps} />
                     </div>
                     <div className="tire-age">{driver.tireLaps || 0} LAPS</div>
                 </div>
@@ -130,21 +110,22 @@ export function TelemetryOverlay({
 // Individual tire indicator
 interface TireIndicatorProps {
     position: 'FL' | 'FR' | 'RL' | 'RR';
-    temp: number;
-    wear: number;
+    tireLaps: number;
 }
 
-function TireIndicator({ position, temp, wear }: TireIndicatorProps) {
-    const tempColor = temp > 100 ? 'var(--bb-red)' :
-        temp > 90 ? 'var(--bb-orange)' :
-            temp > 80 ? 'var(--bb-green)' : 'var(--bb-blue)';
+function TireIndicator({ position, tireLaps }: TireIndicatorProps) {
+    const wear = Math.min(tireLaps / 40, 1); // Normalize: 40 laps = fully worn
+    const wearPct = wear * 100;
+    const tempColor = wearPct > 75 ? 'var(--bb-red)' :
+        wearPct > 50 ? 'var(--bb-orange)' :
+            wearPct > 25 ? 'var(--bb-green)' : 'var(--bb-blue)';
 
     return (
         <div className="tire-indicator" style={{ '--tire-color': tempColor } as React.CSSProperties}>
             <div className="tire-box">
-                <div className="tire-wear" style={{ height: `${wear * 100}%` }} />
+                <div className="tire-wear" style={{ height: `${wearPct}%` }} />
             </div>
-            <span className="tire-temp">{temp}°</span>
+            <span className="tire-temp">{position}</span>
         </div>
     );
 }

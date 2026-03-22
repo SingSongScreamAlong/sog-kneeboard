@@ -23,11 +23,18 @@ interface Driver {
     name: string;
     carNumber: string;
     carName: string;
+    teamName: string;
+    irating: number;
+    safetyRating: number;
     position: number;
     gapToLeader: number;
     gapAhead: number | null;
     trackPosition: number; // 0-1
     speed: number;
+    throttle: number;
+    brake: number;
+    gear: number;
+    rpm: number;
     lap: number;
     inPit: boolean;
     tireCompound: 'soft' | 'medium' | 'hard';
@@ -181,11 +188,18 @@ export class RelayHandler {
                 name: car.driverName || existingDriver?.name || `Driver ${car.carId}`,
                 carNumber: car.carNumber || String(car.carId),
                 carName: existingDriver?.carName || 'Unknown',
+                teamName: existingDriver?.teamName || '',
+                irating: existingDriver?.irating || 0,
+                safetyRating: existingDriver?.safetyRating || 0,
                 position: car.position || index + 1,
                 gapToLeader: this.calculateGap(car.pos.s, leaderPos),
                 gapAhead: index === 0 ? null : this.calculateGap(car.pos.s, sortedCars[index - 1].pos.s),
                 trackPosition: car.pos.s,
                 speed: car.speed,
+                throttle: car.throttle,
+                brake: car.brake,
+                gear: car.gear,
+                rpm: car.rpm || 0,
                 lap: car.lap,
                 inPit: car.inPit,
                 tireCompound: existingDriver?.tireCompound || 'medium',
@@ -248,11 +262,18 @@ export class RelayHandler {
                 name: msg.driverName,
                 carNumber: msg.carNumber,
                 carName: msg.carName,
+                teamName: msg.teamName || '',
+                irating: msg.irating || 0,
+                safetyRating: msg.safetyRating || 0,
                 position: this.drivers.size + 1,
                 gapToLeader: 0,
                 gapAhead: null,
                 trackPosition: 0,
                 speed: 0,
+                throttle: 0,
+                brake: 0,
+                gear: 0,
+                rpm: 0,
                 lap: 0,
                 inPit: true,
                 tireCompound: 'medium',
@@ -310,9 +331,14 @@ export class RelayHandler {
         return Array.from(this.drivers.values())
             .sort((a, b) => a.position - b.position)
             .map(driver => ({
+                id: driver.id,
+                name: driver.name,
                 driverId: driver.id,
                 driverName: driver.name,
                 carNumber: driver.carNumber,
+                teamName: driver.teamName,
+                irating: driver.irating,
+                safetyRating: driver.safetyRating,
                 position: driver.position,
                 gapToLeader: driver.gapToLeader,
                 gapAhead: driver.gapAhead,
@@ -320,7 +346,16 @@ export class RelayHandler {
                 tireLaps: driver.tireLaps,
                 pitCount: driver.pitCount,
                 isInPit: driver.inPit,
+                pitStatus: driver.inPit ? 'in_pit' : 'on_track',
                 isInBattle: Math.abs(driver.gapAhead || 999) < 1.5,
+                gapBehind: null,
+                lastLapTime: null,
+                bestLapTime: null,
+                speed: driver.speed,
+                throttle: driver.throttle,
+                brake: driver.brake,
+                gear: driver.gear,
+                rpm: driver.rpm,
             }));
     }
 
