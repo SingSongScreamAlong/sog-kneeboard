@@ -152,6 +152,11 @@ export class TelemetryGenerator {
             tireLaps: d.tireLaps,
             pitCount: d.pitCount,
             isInPit: d.isInPit,
+            speed: d.speed * 3.6, // Convert m/s to km/h
+            throttle: 0.7 + Math.random() * 0.3, // 70-100%
+            brake: Math.random() > 0.8 ? Math.random() * 0.5 : 0,
+            gear: 5 + Math.floor(Math.random() * 3), // 5-7
+            rpm: 8000 + Math.floor(Math.random() * 4000),
         }));
     }
 

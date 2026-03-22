@@ -36,14 +36,21 @@ export const useDriverStore = create<DriverStoreState>((set, get) => ({
     // Actions
     setDrivers: (drivers) => {
         set({ drivers });
-        // Auto-populate stack with top 5 if empty
         const { stackDriverIds } = get();
-        if (stackDriverIds.length === 0) {
-            const topFive = drivers
+        const driverIdSet = new Set(drivers.map(d => d.id));
+
+        // Remove stale IDs that no longer exist in the new driver list
+        const validStackIds = stackDriverIds.filter(id => driverIdSet.has(id));
+
+        // If stack is empty or all previous IDs became stale, seed from top 5
+        if (validStackIds.length === 0) {
+            const topFive = [...drivers]
                 .sort((a, b) => a.position - b.position)
                 .slice(0, 5)
                 .map(d => d.id);
             set({ stackDriverIds: topFive });
+        } else if (validStackIds.length !== stackDriverIds.length) {
+            set({ stackDriverIds: validStackIds });
         }
     },
 

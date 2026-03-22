@@ -12,6 +12,8 @@ import type {
 } from '@broadcastbox/common';
 import { SESSION_STATE_CONFIGS } from '@broadcastbox/common';
 
+export type UserRole = 'operator' | 'director' | 'superadmin';
+
 interface SessionStoreState {
     // Current session data
     session: Session | null;
@@ -21,12 +23,16 @@ interface SessionStoreState {
     // Connection status
     isConnected: boolean;
 
+    // Account role
+    userRole: UserRole;
+
     // Actions
     setSession: (session: Session | null) => void;
     setSessionState: (state: SessionState) => void;
     updateLap: (currentLap: number) => void;
     updateFlag: (flag: FlagStatus) => void;
     setConnected: (connected: boolean) => void;
+    setUserRole: (role: UserRole) => void;
 }
 
 const DEFAULT_CONFIG: SessionStateConfig = {
@@ -42,6 +48,7 @@ export const useSessionStore = create<SessionStoreState>((set, get) => ({
     sessionState: 'IDLE',
     stateConfig: DEFAULT_CONFIG,
     isConnected: false,
+    userRole: 'superadmin',
 
     // Actions
     setSession: (session) => set({ session }),
@@ -68,4 +75,6 @@ export const useSessionStore = create<SessionStoreState>((set, get) => ({
     },
 
     setConnected: (isConnected) => set({ isConnected }),
+
+    setUserRole: (userRole) => set({ userRole }),
 }));
